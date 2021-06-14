@@ -1,0 +1,21 @@
+<%- include('partials/Home_header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/forgetpass.css">
+<script src="/forgetpass.js" defer></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<body>
+    <% if(sentemail && sentemail.length > 0) { %>
+        <div id="success-bar"><span class="check fa fa-envelope"></span><%= sentemail %></div>
+      <% } %>
+    <div class="container1">
+        <img id="logo" src="https://sv1.picz.in.th/images/2021/03/29/DXzUM8.png">
+        <div id="topic">FLEX</div>
+        <div id="page-topic">RESET PASSWORD</div>
+            <form action="/forgetpassword" method="POST">
+                <input type="text" name="email" placeholder="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+                <button type="submit">Reset</button>
+            </form>
+    </div>
+</body>
+<%- include('partials/footer.ejs')%>

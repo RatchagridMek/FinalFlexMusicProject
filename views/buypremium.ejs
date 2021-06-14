@@ -1,0 +1,85 @@
+<%- include('partials/premiumhead.ejs')%>
+<link rel="stylesheet" type="text/css" href="/buypremium.css">
+<script src="/buypremium.js" defer></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Farro:wght@500&display=swap" rel="stylesheet">
+<body>
+    <div class="container">
+        <a>
+            <form action="/payment" target="_blank">
+                <a class="startcover"><b>PREMIUM<br>USER</b><br><button type="submit" class="startbutton">START USING PREMIUM</button></a>
+            </form>
+            <img class="startpic" src="https://images.wallpaperscraft.com/image/guitarist_musician_concert_122198_3840x2160.jpg">
+        </a><br>
+        <div class="container2">
+            <div class="rec-con2">Why we recommend you to use premium ?</div>
+            <a class="cover-topic">
+                <span style="font-size: 200px; margin-left: 20%; margin-top: 15%;" class="fa fa-music"></span>
+            </a>
+            <a class="cover-topic">
+                <span style="font-size: 200px; margin-left: 20%; margin-top: 20%;" class="fa fa-money"></span>
+            </a>
+            <a class="cover-topic">
+                <span style="font-size: 200px; margin-left: 20%; margin-top: 20%;" class="fa fa-hand-o-right"></span>
+            </a><br><br>
+            
+            <a style="margin-top: 4%; margin-left: 13%; font-size: 200%; font-family: 'Noto Sans KR', sans-serif;"><b>MUSIC DOWNLOAD</b></a>
+            <a style="margin-top: 4%; margin-left: 18.5%; font-size: 200%; font-family: 'Noto Sans KR', sans-serif;"><b>BEST PRICE</b></a>
+            <a style="margin-top: 4%; margin-left: 22%; font-size: 200%; font-family: 'Noto Sans KR', sans-serif;"><b>EASY TO USE</b></a><br><br>
+
+            <a style="position: absolute; margin-top: 0%; margin-left: 13%; font-size: 200%; font-family: 'Noto Sans KR', sans-serif;">Listen everywhere</a>
+            <a style="position:absolute; margin-top: 0%; margin-left: 44%; font-size: 200%; font-family: 'Noto Sans KR', sans-serif;">The longer you use,<br> the lower your price</a>
+            <a style="position: absolute; margin-top: 0%; margin-left: 75%; font-size: 200%; font-family: 'Noto Sans KR', sans-serif;">Easy to use functions,<br> suitable for all ages.</a>
+
+        </div>
+        <div class="container3">
+            <a class="footer-con3-1">
+                <b><b style="color:#ff00bc;">Easiest</b> way to listen <br> your favourite music</b>
+            </a>
+            <form action='/payment' target="_blank">
+                <button type="submit" class="footer-con3-2"><b>Start premium now</b></button>
+            </form>
+            
+            <img class="startpic" src="https://www.i-pic.info/i/MYHx34905.jpg">
+        </div>
+        <%- include('partials/customfooter.ejs') %>
+    </div>
+
+    <div class="mobile-container1">
+        <a>
+            <form action="/payment" target="_blank" style="margin-top: 17%; margin-bottom: 17%;">
+                <br><br>
+                <a class="mb-container1-inside-header">Unlimited music without Ads
+                </a><br>
+                <a class="mb-container1-inside-middle">Enjoy music everywhere <br>and everyday</a><br>
+                <input type="submit" class="mb-container1-inside-startbtn" value="Start using premium">
+            </form>
+        </a><br>
+        <div class="mobile-container2">
+            <div class="mb-container2-inside-header">Why we recommend you <br>to use premium ?</div>
+            <a style="font-size: 58px;" class="mb-container2-inside-covertopic">
+                <span class="mb-container2-inside-piccover fa fa-music"></span>
+            </a>
+            <a class="mb-container2-inside-picdesc">MUSIC DOWNLOAD</a>
+            <br>
+            <a class="mb-container2-inside-covertopic">
+                <span style="font-size: 58px;" class=" mb-container2-inside-piccover fa fa-money"></span>
+            </a>
+            <a class="mb-container2-inside-picdesc">The longer you use <br>the lower your price</a>
+            <br>
+            <a class="mb-container2-inside-covertopic">
+                <span style="font-size: 58px;" class=" mb-container2-inside-piccover fa fa-hand-o-right"></span>
+            </a>
+            <a class="mb-container2-inside-picdesc">Easy to use functions,<br> suitable for all ages.</a>
+            <br><br>
+            
+
+        </div>
+        <%- include('partials/customfooter.ejs') %>
+    </div>
+    
+</body>
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script src="/HeadNav.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/HeadNavbug.css">
+    <link rel="stylesheet" type="text/css" href="/sidenav.css">
+    <script src="/sidenav.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel = "icon" href = "/photo/logoGern.png" type = "image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <header>
+        <title>FLEX</title> 
+        <a class="logo"><img class="logo_size" onclick="location.href='/main'" src="/photo/logoEN2.png" alt="logo"></a>
+        <form action="/search" method="POST">
+            <input class="searchhead" id="searchinp" name="search" type="input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Song / Artist'" placeholder="Search Song / Artist"><br>
+            <button id="search-btn" type="submit" style="display: none;"></button>
+        </form>
+        <a class="open-sidenav">
+            <span onclick="opensidenav()" class="fa fa-list"></span>
+        </a>
+        <% if(currentUser.rank === "Member"){ %>
+            <button onclick="location.href='/premium'" class="premiumbtn">UPGRADE </button>
+        <% } else if(currentUser.rank === "Premium"){ %>
+            <button class="premiumbtn">Premium </button>
+        <% } else if(currentUser.rank === "Admin"){ %>
+            <button onclick="location.href='/userM'" class="premiumbtn">ADMIN </button>
+        <% } %>
+        <img class="userlogo" onclick="myfunction()" src="<%= currentUser.Image %>">
+        <img class="dropdownlogo dropdown" onclick="myfunction()" id="droppic" src="https://cosycorner.co.nz/wp-content/uploads/revslider/slider-1/white-down-arrow-png-2.png">
+        <div id="myDropdown" class="dropdown-list">
+            <a href="/profile"> My profile</a>
+            <a href="/resetpassword"> Change password</a>
+            <a onclick="pathset()"> Logout</a>
+        </div>
+        <div class="loader-wrapper" id="loading">
+            <span class="loader"><span class="loader-inner"></span></span>
+          </div>
+    </header>
+    <body style="background-color: #262323; -webkit-text-size-adjust: auto;">
+        <div class="sidenav unshow" id="sidenav">
+            <div>
+                <br>
+                <a href="/main"><span style="display: unset;" class="fa fa-home"></span>   Home</a>
+                <a id="favourite" href="/favourite" ><span style="display: unset;" class="fa fa-heart-o"></span>   Favourite</a>
+            </div>
+          </div>

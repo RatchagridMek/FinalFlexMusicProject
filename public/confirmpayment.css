@@ -1,0 +1,1059 @@
+.container{
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    text-align: left;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.payment-wrapper{
+    width: 700px;
+    height: 800px;
+    border: 2px solid black;
+    margin-top: 2.5%;
+    margin-left: 33%;
+}
+
+.show-product{
+    width: 550px;
+    height: 100px;
+    border: 2px solid black;
+    margin-top: 5%;
+    margin-left: 10%;   
+}
+
+.product-name{
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 150%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.product-price{
+    margin-left: 5%;
+    font-size: 150%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.show-payment{
+    width: 550px;
+    height: 550px;
+    border: 2px solid black;
+    margin-left: 10%;
+    margin-top: 0.001%;
+}
+
+.payment-header{
+    border: 2px solid black;
+    width: 550px;
+    height: 50px;
+    margin-left: 10%;
+    font-size: 150%;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0% 0% 0% 1%;
+    background-color: rgb(230, 229, 229);
+}
+
+#cardheader{
+    font-size: 150%;
+    font-family: 'Noto Sans', sans-serif;
+    margin-left: 7%;
+}
+
+#cardinput{
+    margin-left: 7%;
+    font-size: 150%;
+    padding: 1% 20% 1% 2%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#creditpic{
+    font-size: 180%;
+    position: absolute;
+    border: 1px solid black;
+    padding: 0.45% 0.5% 0.5% 0.5%;
+    background-color: rgb(230,229,229);
+}
+
+#card-exp-header{
+    font-size: 150%;
+    font-family: 'Noto Sans', sans-serif;
+    margin-left: 7%;
+}
+
+#card-exp{
+    font-size: 150%;
+    margin-left: 7%;
+    padding: 1% 0% 1% 2%;
+    width: 37%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#card-cv{
+    font-size: 150%;
+    margin-left: 10%;
+    padding: 1% 0% 1% 2%;
+    width: 27%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#card-cv-code{
+    font-size: 150%;
+    font-family: 'Noto Sans', sans-serif;
+    margin-left: 10%;
+}
+
+#coupon{
+    font-size: 150%;
+    font-family: 'Noto Sans', sans-serif;
+    margin-left: 7%;
+}
+
+#couponcode{
+    font-size: 150%;
+    margin-left: 7%;
+    padding: 1% 0% 1% 2%;
+    width: 75%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#couponpic{
+    font-size: 180%;
+    position: absolute;
+    border: 1px solid black;
+    padding: 0.45% 0.5% 0.5% 0.5%;
+    background-color: rgb(230,229,229);
+}
+
+#submitbtn{
+    padding: 1% 2% 1% 2%;
+    color:white;
+    border: 1px solid green;
+    background: rgb(75, 177, 35);
+    font-size: 180%;
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    cursor: pointer;
+}
+
+#submitbtn:hover{
+    background: rgb(49, 99, 29);
+}
+
+@media screen and (max-width: 1024px){
+    .mobile-container {
+        width: 1024px;
+        height: 1275px;
+        position: relative;
+        text-align: left;
+        overflow-x: scroll;
+    }
+    .mb-payment-wrapper {
+        width: 771px;
+        height: 1000px;
+        border: 2px solid black;
+        margin-top: 12%;
+        margin-left: 12%;
+    }
+    .mb-show-product {
+        width: 690px;
+        height: 150px;
+        border: 2px solid black;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+    .mb-product-name {
+        margin-top: 0%;
+        margin-left: 5%;
+        font-size: 200%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-product-price {
+        margin-left: 5%;
+        font-size: 200%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-payment-header {
+        border: 2px solid black;
+        width: 690px;
+        margin-top: 4%;
+        height: 75px;
+        margin-left: 5%;
+        font-size: 250%;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 0% 0% 0% 1%;
+        background-color: rgb(230, 229, 229);
+    }
+    .mb-show-payment {
+        width: 690px;
+        height: 650px;
+        border: 2px solid black;
+        margin-left: 5%;
+    }
+    #mb-cardheader {
+        font-size: 250%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 9%;
+    }
+    #mb-cardinput {
+        margin-left: 8%;
+        font-size: 240%;
+        padding: 1% 0% 1% 2%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-creditpic {
+        font-size: 230%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.5% 1.5% 1.5% 1.5%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-card-exp-header {
+        font-size: 250%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 2%;
+    }
+    #mb-card-cv-code {
+        font-size: 250%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 13%;
+    }
+    #mb-card-exp {
+        font-size: 250%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        margin-top: 2%;
+        width: 37%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-card-cv {
+        font-size: 250%;
+        margin-left: 24%;
+        padding: 1% 0% 1% 2%;
+        width: 28%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-coupon {
+        font-size: 250%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 3%;
+    }
+    #mb-couponcode {
+        font-size: 250%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 75%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-couponpic {
+        font-size: 280%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.25% 2% 1.25% 2%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-submitbtn {
+        padding: 2% 1% 2% 1%;
+        color: white;
+        border: 1px solid green;
+        background: rgb(75, 177, 35);
+        font-size: 250%;
+        margin-left: 25%;
+        width: 50%;
+        margin-top: 5%;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Noto Sans', sans-serif;
+        cursor: pointer;
+    }
+    .container{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .mobile-container {
+        width: 768px;
+        height: 954px;
+        position: relative;
+        text-align: left;
+        overflow-x: scroll;
+    }
+    .mb-payment-wrapper {
+        width: 609px;
+        height: 750px;
+        border: 2px solid black;
+        margin-top: 11%;
+        margin-left: 10%;
+    }
+    .mb-show-product {
+        width: 530px;
+        height: 115px;
+        border: 2px solid black;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+    .mb-product-name {
+        margin-top: 0%;
+        margin-left: 5%;
+        font-size: 180%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-product-price {
+        margin-left: 5%;
+        font-size: 180%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-payment-header {
+        border: 2px solid black;
+        width: 530px;
+        margin-top: 4%;
+        height: 50px;
+        margin-left: 5%;
+        font-size: 200%;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 0% 0% 0% 1%;
+        background-color: rgb(230, 229, 229);
+    }
+    .mb-show-payment {
+        width: 530px;
+        height: 470px;
+        border: 2px solid black;
+        margin-left: 5%;
+    }
+    #mb-cardheader {
+        font-size: 190%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 9%;
+    }
+    #mb-cardinput {
+        margin-left: 8%;
+        font-size: 170%;
+        padding: 1% 0% 1% 2%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-creditpic {
+        font-size: 160%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.5% 1.5% 1.5% 1.5%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-card-exp-header {
+        font-size: 180%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 2%;
+    }
+    #mb-card-cv-code {
+        font-size: 180%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 16%;
+    }
+    #mb-card-exp {
+        font-size: 170%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 37%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-card-cv {
+        font-size: 170%;
+        margin-left: 23%;
+        padding: 1% 0% 1% 2%;
+        width: 27%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-coupon {
+        font-size: 190%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 3%;
+    }
+    #mb-couponcode {
+        font-size: 170%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 75%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-couponpic {
+        font-size: 190%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.25% 2% 1.25% 2%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-submitbtn {
+        padding: 1% 1% 1% 1%;
+        color: white;
+        border: 1px solid green;
+        background: rgb(75, 177, 35);
+        font-size: 180%;
+        margin-left: 25%;
+        width: 50%;
+        margin-top: 3%;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Noto Sans', sans-serif;
+        cursor: pointer;
+    }
+    .container{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .mobile-container {
+        width: 540px;
+        height: 676px;
+        position: relative;
+        text-align: left;
+        overflow-x: scroll;
+    }
+    .mb-payment-wrapper {
+        width: 540px;
+        height: 676px;
+        border: 2px solid black;
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+    .mb-show-product {
+        width: 480px;
+        height: 95px;
+        border: 2px solid black;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+    .mb-product-name {
+        margin-top: 0%;
+        margin-left: 5%;
+        font-size: 145%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-product-price {
+        margin-left: 5%;
+        font-size: 145%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-payment-header {
+        border: 2px solid black;
+        width: 480px;
+        margin-top: 4%;
+        height: 50px;
+        margin-left: 5%;
+        font-size: 160%;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 0% 0% 0% 1%;
+        background-color: rgb(230, 229, 229);
+    }
+    .mb-show-payment {
+        width: 480px;
+        height: 400px;
+        border: 2px solid black;
+        margin-left: 5%;
+    }
+    #mb-cardheader {
+        font-size: 160%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 9%;
+    }
+    #mb-cardinput {
+        margin-left: 8%;
+        font-size: 140%;
+        padding: 1% 0% 1% 2%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-creditpic {
+        font-size: 160%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.65% 1.5% 1.65% 1.5%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-card-exp-header {
+        font-size: 140%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 2%;
+    }
+    #mb-card-cv-code {
+        font-size: 140%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 22%;
+    }
+    #mb-card-exp {
+        font-size: 140%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 37%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-card-cv {
+        font-size: 140%;
+        margin-left: 23%;
+        padding: 1% 0% 1% 2%;
+        width: 27%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-coupon {
+        font-size: 150%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 3%;
+    }
+    #mb-couponcode {
+        font-size: 140%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 75%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-couponpic {
+        font-size: 150%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.7% 2.25% 1.7% 2.25%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-submitbtn {
+        padding: 1% 1% 1% 1%;
+        color: white;
+        border: 1px solid green;
+        background: rgb(75, 177, 35);
+        font-size: 180%;
+        margin-left: 25%;
+        width: 50%;
+        margin-top: 3%;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Noto Sans', sans-serif;
+        cursor: pointer;
+    }
+    .container{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .mobile-container {
+        width: 414px;
+        height: 676px;
+        position: relative;
+        text-align: left;
+        overflow-x: scroll;
+    }
+    .mb-payment-wrapper {
+        width: 414px;
+        height: 676px;
+        border: 2px solid black;
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+    .mb-show-product {
+        width: 380px;
+        height: 95px;
+        border: 2px solid black;
+        margin-top: 5%;
+        margin-left: 3%;
+    }
+    .mb-product-name {
+        margin-top: 0%;
+        margin-left: 5%;
+        font-size: 130%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-product-price {
+        margin-left: 5%;
+        font-size: 130%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-payment-header {
+        border: 2px solid black;
+        width: 380px;
+        margin-top: 4%;
+        height: 50px;
+        margin-left: 3%;
+        font-size: 160%;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 0% 0% 0% 1%;
+        background-color: rgb(230, 229, 229);
+    }
+    .mb-show-payment {
+        width: 380px;
+        height: 380px;
+        border: 2px solid black;
+        margin-left: 3%;
+    }
+    #mb-cardheader {
+        font-size: 150%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 9%;
+    }
+    #mb-cardinput {
+        margin-left: 8%;
+        font-size: 120%;
+        padding: 1% 0% 1% 2%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-creditpic {
+        font-size: 150%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.5% 1.5% 1.5% 1.5%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-card-exp-header {
+        font-size: 130%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 2%;
+    }
+    #mb-card-cv-code {
+        font-size: 130%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 15%;
+    }
+    #mb-card-exp {
+        font-size: 130%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 37%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-card-cv {
+        font-size: 130%;
+        margin-left: 23%;
+        padding: 1% 0% 1% 2%;
+        width: 27%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-coupon {
+        font-size: 140%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 3%;
+    }
+    #mb-couponcode {
+        font-size: 130%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 75%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-couponpic {
+        font-size: 140%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.8% 2.25% 1.8% 2.25%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-submitbtn {
+        padding: 1% 1% 1% 1%;
+        color: white;
+        border: 1px solid green;
+        background: rgb(75, 177, 35);
+        font-size: 150%;
+        margin-left: 25%;
+        width: 50%;
+        margin-top: 3%;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Noto Sans', sans-serif;
+        cursor: pointer;
+    }
+    .container{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 375px) and (height: 812px){
+    .mobile-container {
+        width: 375px;
+        height: 747px;
+        position: relative;
+        text-align: left;
+        overflow-x: scroll;
+    }
+    .mb-payment-wrapper {
+        width: 375px;
+        height: 748px;
+        border: 2px solid black;
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+    .mb-show-product {
+        width: 345px;
+        height: 95px;
+        border: 2px solid black;
+        margin-top: 20%;
+        margin-left: 3%;
+    }
+    .mb-product-name {
+        margin-top: 0%;
+        margin-left: 5%;
+        font-size: 125%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-product-price {
+        margin-left: 5%;
+        font-size: 125%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-payment-header {
+        border: 2px solid black;
+        width: 345px;
+        margin-top: 4%;
+        height: 50px;
+        margin-left: 3%;
+        font-size: 160%;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 0% 0% 0% 1%;
+        background-color: rgb(230, 229, 229);
+    }
+    .mb-show-payment {
+        width: 345px;
+        height: 380px;
+        border: 2px solid black;
+        margin-left: 3%;
+    }
+    #mb-cardheader {
+        font-size: 150%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 9%;
+    }
+    #mb-cardinput {
+        margin-left: 8%;
+        font-size: 120%;
+        padding: 1% 0% 1% 2%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-creditpic {
+        font-size: 150%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.5% 1.5% 1.5% 1.5%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-card-exp-header {
+        font-size: 130%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 2%;
+    }
+    #mb-card-cv-code {
+        font-size: 130%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 10%;
+    }
+    #mb-card-exp {
+        font-size: 130%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 37%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-card-cv {
+        font-size: 130%;
+        margin-left: 23%;
+        padding: 1% 0% 1% 2%;
+        width: 27%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-coupon {
+        font-size: 140%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 3%;
+    }
+    #mb-couponcode {
+        font-size: 130%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 75%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-couponpic {
+        font-size: 140%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 2% 2.25% 2.05% 2.25%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-submitbtn {
+        padding: 1% 1% 1% 1%;
+        color: white;
+        border: 1px solid green;
+        background: rgb(75, 177, 35);
+        font-size: 150%;
+        margin-left: 25%;
+        width: 50%;
+        margin-top: 3%;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Noto Sans', sans-serif;
+        cursor: pointer;
+    }
+    .container{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 375px) and (height: 667px){
+    .mobile-container {
+        width: 375px;
+        height: 617px;
+        position: relative;
+        text-align: left;
+        overflow-x: scroll;
+    }
+    .mb-payment-wrapper {
+        width: 375px;
+        height: 620px;
+        border: 2px solid black;
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+    .mb-show-product {
+        width: 345px;
+        height: 95px;
+        border: 2px solid black;
+        margin-top: 5%;
+        margin-left: 3%;
+    }
+    .mb-product-name {
+        margin-top: 0%;
+        margin-left: 5%;
+        font-size: 125%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-product-price {
+        margin-left: 5%;
+        font-size: 125%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-payment-header {
+        border: 2px solid black;
+        width: 345px;
+        margin-top: 4%;
+        height: 50px;
+        margin-left: 3%;
+        font-size: 160%;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 0% 0% 0% 1%;
+        background-color: rgb(230, 229, 229);
+    }
+    .mb-show-payment {
+        width: 345px;
+        height: 380px;
+        border: 2px solid black;
+        margin-left: 3%;
+    }
+    #mb-cardheader {
+        font-size: 150%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 9%;
+    }
+    #mb-cardinput {
+        margin-left: 8%;
+        font-size: 120%;
+        padding: 1% 0% 1% 2%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-creditpic {
+        font-size: 150%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.5% 1.5% 1.5% 1.5%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-card-exp-header {
+        font-size: 130%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 2%;
+    }
+    #mb-card-cv-code {
+        font-size: 130%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 10%;
+    }
+    #mb-card-exp {
+        font-size: 130%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 37%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-card-cv {
+        font-size: 130%;
+        margin-left: 23%;
+        padding: 1% 0% 1% 2%;
+        width: 27%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-coupon {
+        font-size: 140%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 3%;
+    }
+    #mb-couponcode {
+        font-size: 130%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 75%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-couponpic {
+        font-size: 140%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 2% 2.25% 2.05% 2.25%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-submitbtn {
+        padding: 1% 1% 1% 1%;
+        color: white;
+        border: 1px solid green;
+        background: rgb(75, 177, 35);
+        font-size: 150%;
+        margin-left: 25%;
+        width: 50%;
+        margin-top: 3%;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Noto Sans', sans-serif;
+        cursor: pointer;
+    }
+    .container{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .mobile-container {
+        width: 320px;
+        height: 568px;
+        position: relative;
+        text-align: left;
+        overflow-x: scroll;
+    }
+    .mb-payment-wrapper {
+        width: 320px;
+        height: 568px;
+        border: 2px solid black;
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+    .mb-show-product {
+        width: 300px;
+        height: 83px;
+        border: 2px solid black;
+        margin-top: 5%;
+        margin-left: 3%;
+    }
+    .mb-product-name {
+        margin-top: 0%;
+        margin-left: 5%;
+        font-size: 110%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-product-price {
+        margin-left: 5%;
+        font-size: 110%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .mb-payment-header {
+        border: 2px solid black;
+        width: 300px;
+        height: 50px;
+        margin-left: 3%;
+        font-size: 150%;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 0% 0% 0% 1%;
+        background-color: rgb(230, 229, 229);
+    }
+    .mb-show-payment {
+        width: 300px;
+        height: 345px;
+        border: 2px solid black;
+        margin-left: 3%;
+    }
+    #mb-cardheader {
+        font-size: 140%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 9%;
+    }
+    #mb-cardinput {
+        margin-left: 8%;
+        font-size: 110%;
+        padding: 1% 0% 1% 2%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-creditpic {
+        font-size: 150%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 1.25% 1.5% 1.25% 1.5%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-card-exp-header {
+        font-size: 110%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 2%;
+    }
+    #mb-card-cv-code {
+        font-size: 110%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 10%;
+    }
+    #mb-card-exp {
+        font-size: 120%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 37%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-card-cv {
+        font-size: 120%;
+        margin-left: 21%;
+        padding: 1% 0% 1% 2%;
+        width: 27%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-coupon {
+        font-size: 120%;
+        font-family: 'Noto Sans', sans-serif;
+        margin-left: 3%;
+    }
+    #mb-couponcode {
+        font-size: 120%;
+        margin-left: 3%;
+        padding: 1% 0% 1% 2%;
+        width: 75%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #mb-couponpic {
+        font-size: 140%;
+        position: absolute;
+        border: 1px solid black;
+        padding: 2% 2% 2.05% 2%;
+        background-color: rgb(230,229,229);
+    }
+    #mb-submitbtn {
+        padding: 1% 2% 1% 2%;
+        color: white;
+        border: 1px solid green;
+        background: rgb(75, 177, 35);
+        font-size: 150%;
+        margin-left: 25%;
+        width: 50%;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Noto Sans', sans-serif;
+        cursor: pointer;
+    }
+    .container{
+        display:none;
+    }
+}

@@ -1,0 +1,67 @@
+<%- include('partials/HeadNav.ejs',{playlist:playlist})%>
+<link rel="stylesheet" type="text/css" href="/search.css">
+<script src="/search.js" defer></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="container">
+        <form action="/search" method="POST">
+            <input class="search" id="searchinp" name="search" type="input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Song / Artist'" placeholder="Search Song / Artist"><br>
+            <button id="search-btn" type="submit" style="display: none;"></button>
+        </form>
+        <% if(song.length === 0){ %>
+                <div class="centering">
+                    <a id="notfound-header"><span class="fa fa-search"></span></a><br>
+                    <a id="notfound-body" >No results found for  "<%= key.toLowerCase() %>"</a><br>
+                    <a id="notfound-footer" >Please make sure your words are spelled correctly or use less or different keywords.</a>
+                </div>
+        <% } else if(song.length !== 0){ %>
+            <div class="rec-cover">
+                <a class="viewer-search"><span style="display: unset;" class="fa fa-star"></span> search by viewer</a>
+                    <% song.forEach(function(song){%>
+                    <div class="song-cover" onclick="location.href='/song?id=<%= song.id %>'">
+                    <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                    <div class="cover-inside">
+                        <a class="cover-header"><strong><%= song.name %></strong></a>
+                        <a class="cover-desc"><%= song.artist %></a>
+                        <a class="cover-viewer">จำนวนคนฟัง : <%= song.viewer %> คน</a>
+                    </div>
+                </div>
+                <% }) %>
+            </div><br>
+        <% } %>
+        <% if(namesong.length === 0){ %>
+            
+        <% } else if(namesong.length !== 0){ %>
+            <div class="rec-cover">
+            <a class="viewer-search"><span style="display: unset;" class="fa fa-music"></span> search by name</a>
+                <% namesong.forEach(function(song){%>
+                <div class="song-cover" onclick="location.href='/song?id=<%= song.id %>'">
+                <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                <div class="cover-inside">
+                    <a class="cover-header"><strong><%= song.name %></strong></a>
+                    <a class="cover-desc"><%= song.artist %></a>
+                </div>
+            </div>
+            <% }) %>
+        </div><br>
+        <% } %>     
+        <% if(artistsong.length === 0){ %>
+           
+        <% } else if(artistsong.length !== 0){ %>
+          <div class="rec-cover">
+            <a class="viewer-search"><span style="display: unset;" class="fa fa-music"></span> search by artist</a>
+                <% artistsong.forEach(function(song){%>
+                <div class="song-cover" onclick="location.href='/song?id=<%= song.id %>'">
+                <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                <div class="cover-inside">
+                    <a class="cover-header"><strong><%= song.name %></strong></a>
+                    <a class="cover-desc"><%= song.artist %></a>
+                </div>
+            </div>
+            <% }) %>
+        </div>   
+        <% } %>
+        <div style="margin-top: 5%;"></div>
+    </div>
+    
+<%- include('partials/footer.ejs')%>

@@ -1,0 +1,90 @@
+<%- include('partials/BugHeadNav.ejs')%>
+<link rel="stylesheet" type="text/css" href="/Profile.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<script src="/Profile.js" defer></script>
+      <div id="main">
+         <div class="container">
+        <img class="profile-pic" src="<%= currentUser.Image %>">
+      </div>
+      <br>
+      <br>
+      <div class="contain">
+          <a id="contain-head">Profile</a>
+          <br><br>
+          <div id="name">
+              <a class="task_list">Username  <a style="margin-left: 17%;"><%= currentUser.name %></a></a>
+          </div>
+          <br>
+          <hr class="hr_tag">
+          <br>
+          <div class="mailandphone">
+            <a class="task_list" style="margin-left: 4%;">Email  <a style="margin-left: 21%;"><%= currentUser.email %></a></a>
+          </div>
+          <br>
+          <hr class="hr_tag">
+          <br>
+          <div class="mailandphone">
+          <a class="task_list" style="margin-left: 3%;">Phone number  <a style="margin-left: 13.5%;"><%= currentUser.phone %></a><a>
+          </div>
+          <br>
+          <hr class="hr_tag">
+          <br>
+          <a class="Edit-btn" onclick="showedit()">Edit account</a>
+          <% if(currentUser.rank === "Admin"){ %>
+              <a class="Manage-btn" onclick="showmanage()">Manage</a>
+          <% } else{ %>
+          <% } %>
+          <form action="/deleteuser" method="POST">
+            <button type="button" onclick="checkconfirm()" class="Remove-btn">Remove Account</button>
+            <button id="reallyconfirm" style="display:none;" type="submit"></button>
+            <input type="text" name="uidforremove" style="display: none;" value="<%=currentUser.id%>">
+          </form>
+      </div>
+      </div>
+  <div id="edit" style="display:none;">
+     <div class="container_edit">
+        <div style="text-align: center;">
+          <div>
+            <img class="exit" onclick="back()" src="https://cdn.pixabay.com/photo/2012/04/12/20/12/x-30465_1280.png">
+          </div>
+          <label for="choose" >
+            <img id="image" class="uspic" src="<%= currentUser.Image %>">
+        </label>
+       </div>
+       <br>
+       <form action="/edit" method="POST" enctype="multipart/form-data">
+         <div>
+           <div class="URL"><strong>Profile Picture URL</strong></div>
+           <input id="choose" onchange="previewFile()" name="image" type="file" class="URL_INP" accept="image/*">
+       </div><br>
+       <div>
+        <div class="URL"><strong>Email</strong></div>
+        <input name="email" id="email" type="text" class="URL_INP" placeholder="<%= currentUser.email %>" onfocus="this.placeholder=''" onblur="this.placeholder='Press email here'" value="<%= currentUser.email %>">
+        </div><br>
+        <div>
+            <div class="URL"><strong>Name</strong></div>
+            <input name="name" id="nameedit" type="text" class="URL_INP" placeholder="<%= currentUser.name %>" onfocus="this.placeholder=''" onblur="this.placeholder='Press name here'" value="<%= currentUser.name %>">
+        </div><br>
+        <div>
+            <div class="URL"><strong>Phone Number</strong></div>
+            <input name="phone" id="phone" type="text" class="URL_INP" placeholder="<%= currentUser.phone %>" onfocus="this.placeholder=''" onblur="this.placeholder='Press phone number here'" value="<%= currentUser.phone %>" autocomplete="false">
+        </div><br><br><br>
+        <input style="display:none;" name="uid" value="<%= currentUser.id %>">
+        <div style="text-align: center;"><button type="submit" class="save-btn">Save Changes</button></div><br><br>
+       </form>
+       
+     </div>
+  </div>
+  <div class="loader-wrapper" id="loading">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  <div id="confirm-wrapper">
+    <div id="confirm-inside-wrapper">
+        <a id="confirmlogo" class="fa fa-times-circle"></a><br><br>
+        <a id="confirmheader">Are you sure ?</a><br>
+        <a id="confirmmiddle">You will not be able to recover your account</a><br><br>
+        <a id="cancle" onclick="cancle()">CANCLE</a>
+        <a id="confirm" onclick="confirm()">CONFIRM</a>
+    </div>
+</div>

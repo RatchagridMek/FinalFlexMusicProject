@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<script src="/searchtest.js" defer></script>
+<link rel="stylesheet" type="text/css" href="/searchtest.css">
+
+</head>
+<body style="background-color: #262323;">
+  
+      <div id="edit-wrapper">
+      <div id="edit-wrapper-inside">
+        <br>
+        <a id="tips">TIPS : ** You can change picture by click at the picture **</a>
+        <form action="/editplaylist/<%= playlist.id %>" method="POST" enctype="multipart/form-data">
+        <label for="Peditimage" >
+          <img id="image" src="<%= playlist.Picture %>">
+        </label><br><br><br>
+      <input name="image" id="Peditimage" type="file" onchange="previewFileforPlaylist('<%= playlist.Picture %>')" style="display:none" accept="image/*">
+      <input type="text" name="oldPimage" style="display:none;" value="<%= playlist.Picture %>">
+      <a id="inpname">
+        name
+        <input name="Pname" id="inpforname" type="text" value="<%= playlist.name %>">
+      </a><br><br><br>
+      <a id="inpdesc">
+        Desc
+        <textarea name="Pdesc" id="inpfordesc" type="text" ><%= playlist.description %></textarea>
+      </a>
+      <button type="submit" id="Pedit-btn">SUBMIT</button>
+    </form>
+      </div>
+    </div>
+  
+</body>
+
+<style>
+
+    #tips{
+      color:rgb(238, 121, 121);
+      font-size: 130%;
+    }
+
+    #Pedit-btn{
+      position: absolute;
+      margin-left: -60%;
+      color: white;
+      margin-top: 28%;
+      font-size: 140%;
+      padding: 20px 40px 20px 40px;
+      font-family: 'Lato', sans-serif;
+      background-color: #4b4848;
+      cursor: pointer;
+    }
+
+    #Pedit-btn:hover{
+      background-color: #7a7777;
+    }
+
+    #inpdesc{
+      color: white;
+      margin-right: 75%;
+      font-size: 200%;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #inpfordesc{
+      width: 65%;
+      height: 15%;
+      font-size: 60%;
+      margin-top: 2%;
+      padding: 5px 0px 5px 14px;
+      margin-left: 8%;
+      position: absolute;
+      border: 1px solid black;
+      border-radius: 15px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #inpname{
+      color: white;
+      margin-right: 72%;
+      font-size: 250%;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #inpforname{
+      width: 65%;
+      height: 3%;
+      font-size: 60%;
+      margin-top: 2%;
+      padding: 5px 0px 5px 14px;
+      margin-left: 4%;
+      position: absolute;
+      border: 1px solid black;
+      border-radius: 10px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #edit-wrapper{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 12;
+    }
+    #edit-wrapper-inside{
+      background-color: #212020;
+      width: 30%;
+      height: 70%;
+      position: relative;
+      top: 15%;
+      left: 35%;
+      border: 1px solid rgb(105, 104, 104);
+      border-radius: 20px;
+      text-align: center;
+    }
+    #image{
+    width: 40%;
+    height: auto;
+    margin-top: 3%;
+    border: 1px solid rgb(255, 250, 250);
+    }
+
+</style>
+<script>
+  function previewFileforPlaylist(){
+    var oldpic = "https://sv1.picz.in.th/images/2021/04/22/AO4jye.png";
+    var preview2 = document.getElementById("image");
+    var file    = document.getElementById("Peditimage").files[0];
+    var reader  = new FileReader();
+
+    reader.onloadend = function () {
+        preview2.src = reader.result;
+    }
+
+    if (file) {
+        reader.readAsDataURL(file);
+    } else {
+        preview2.src = oldpic;
+    }
+}
+</script>
+</html>

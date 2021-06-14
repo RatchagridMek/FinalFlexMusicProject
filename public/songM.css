@@ -1,0 +1,335 @@
+header {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    background-color: #34495E;
+    z-index: 2;
+  }
+
+  #success-bar{
+    width: 25%;
+    padding: 5px 6px 6px 12px;
+    color: black;
+    font-size: 165%;
+    height: 45px;
+    background-color: rgb(255 255 255);
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 0;
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 1%;
+    opacity: 0.9;
+    transition: all 1s;
+    box-shadow: 0 0 10px 5px #147117;
+
+  }
+  
+  .check{
+    color: #32ce32;
+    margin-right: 4%;
+  }
+
+.header_add{
+  font-size: 300%;
+  font-family: 'Zen Dots', cursive;
+  margin-top: -7.5%;
+  margin-bottom: 1%;
+}
+  .logo {
+    font-size: 200%;
+    font-family: 'Zen Dots', cursive;
+    color:white;
+    margin-left: 2.5%;
+    padding: 1% 1% 1% 1%;
+  }
+
+  .pic{
+    width: 15%;
+    border: 2px solid black;
+    margin-bottom: 2%;
+    max-height: 30%;
+  }
+
+#addnew{
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+body{
+    margin: auto auto auto auto;
+    overflow: hidden;
+}
+
+.control-header{
+  margin: 3% auto auto 15%;
+}
+
+.inp{
+  width: 31.2%;
+  font-size: 150%;
+}
+.inp2{
+  width: 31%;
+  font-size: 150%;
+}
+.inp3{
+  width: 31%;
+  font-size: 150%;
+}
+.inp4{
+  width: 31%;
+  font-size: 150%;
+}
+
+.text{
+  font-size: 150%;
+}
+
+
+
+#add{
+  font-size: 300%;
+  margin-left: 52%;
+}
+
+#sub-btn{
+  width: 7%;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  font-size: 120%;
+  margin-left: 1%;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.search{
+  outline: none;
+  width: 30%;
+  font-size: 110%;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: 'Noto Sans TC', sans-serif;
+  padding: 1% 1% 1% 3%;
+  background-image: url('https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png');
+  background-size: 5%;
+  background-repeat: no-repeat;
+  background-position: 2%;
+}
+
+.sort-name{
+  display:none;
+}
+
+.sort-artist{
+  display:none;
+}
+
+.sort-view{
+  display:none;
+}
+
+.search::placeholder{
+  color:rgb(0, 0, 0);
+}
+
+#userM:hover{
+  background-color: rgb(63, 59, 59);
+}
+
+#playlistM:hover{
+  background-color: rgb(63, 59, 59);
+}
+
+#cancle{
+  display: inline-block;
+  color: #ffffff;
+  background-color: rgb(156 153 153 / 50%);
+  padding: 20px 40px 20px 40px;
+  font-size: 150%;
+  margin-left: 17%;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+}
+
+#confirm{
+  display: inline-block;
+  color: #ffffff;
+  background-color: rgb(255 0 0 / 60%);
+  padding: 20px 40px 20px 40px;
+  font-size: 150%;
+  margin-left: 10%;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+}
+
+#confirm-wrapper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  display:none;
+  z-index: 12;
+}
+
+#confirmlogo{
+  font-size: 150px;
+  margin-left: 40%;
+  margin-top: 3%;
+  color: red;
+}
+
+#confirmheader{
+  font-size: 300%;
+  margin-left: 31%;
+  font-family: 'Lato', sans-serif;
+}
+
+#confirmmiddle{
+  font-size: 170%;
+  color: rgb(98 95 95);
+  margin-left: 15%;
+  font-family: 'Lato', sans-serif;
+}
+
+#confirm-inside-wrapper{
+  display: block;
+  width: 700px;
+  height: 400px;
+  position: relative;
+  left: 35%;
+  top: 30%;
+  background-color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 97%;
+  margin-top: 2%;
+  margin: 2% auto auto 3%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 150%;
+  text-overflow: ellipsis;
+}
+
+th{
+  border: 1px solid #dddddd;
+  padding: 4px;
+  text-align: center;
+}
+td{
+  border: 1px solid #dddddd;
+  padding: 4px;
+  text-align: center;
+}
+
+.mode_pic{
+  width: 50%;
+  margin-left: 40%;
+}
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 13%; /* Set the width of the sidebar */ /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 0; /* Stay on top */
+  bottom: 1; /* Stay at the top */
+  left: 0;
+  position: absolute;
+  background-color: #385068; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: auto auto auto auto;
+  text-decoration: none;
+  font-size: 130%;
+  color: #ffffff;
+  display: block;
+  font-family: 'Mukta', sans-serif;
+  -webkit-text-size-adjust: auto;
+}
+
+.container{
+  border : 1px solid black;
+  height: 900px;
+  margin: auto auto auto 10%;
+  overflow-y: scroll;
+  width: 90%;
+  transition: all 1s;
+}
+.container2{
+  text-align: center;
+  border : 1px solid black;
+  height: 900px;
+  margin: auto auto auto 10%;
+  width: 90%;
+}
+
+.sub-add-btn{
+  font-size: 100%;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  border:1px solid black;
+  border-radius: 12px;
+  outline: none;
+  transition: transform 0.5s;
+}
+
+.sub-add-btn:hover{
+  background-color: rgb(47, 105, 172);
+  color: white;
+  transform: scale(1.1);
+}
+
+.remove{
+  text-decoration: none;
+  color:red;
+}
+
+.edit{
+  text-decoration: none;
+  color:red;
+}
+
+.select{
+  margin-left: 78%;
+  font-size: 120%;
+  background-color: rgb(255, 255, 255);
+  background : rgb(255, 255, 255);
+  border: 2px solid black;
+  outline: none;
+  color:rgb(0, 0, 0);
+  width: 20%;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

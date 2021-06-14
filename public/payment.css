@@ -1,0 +1,1193 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+
+.container{
+    width: 1920px;
+    height: 1000px;
+    position: relative;
+    text-align: center;
+}
+
+.container-inside1{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    width: 450px;
+    height: 700px;
+    margin-left: 13%;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+.container-inside2{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #fd1892 0%, #fec837 25%, #2c90fc 50%, #b8fd33 75%, #b827fc 100%);
+    border-image-slice: 1;
+    width: 450px;
+    height: 700px;
+    margin-left: 37%;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+.container-inside3{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #ff9900 0%, #ff0000 25%, #09ff00 50%, #6200ff 75%, #0004ff 100%);
+    border-image-slice: 1;
+    width: 450px;
+    height: 700px;
+    margin-left: 61%;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+.header-plan{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 16%;
+    margin-top: 8%;
+    font-size: 200%;
+    font-family: 'Lato', sans-serif;
+}
+
+.middle-plan{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 16%;
+    margin-top: 10%;
+    font-size: 150%;
+    font-family: 'Lato', sans-serif;
+}
+
+.capacity-plan{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 4%;
+    margin-top: 11.5%;
+    font-size: 150%;
+    font-family: 'Lato', sans-serif;
+}
+
+.detail-starter{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 15%;
+    margin-top: 16%;
+    font-size: 150%;
+    height: 550px;
+    font-family: 'Lato', sans-serif;
+}
+
+.starter-confirmbtn{
+    margin-top: 67%;
+    border-color: white;
+    color:white;
+    padding: 14px 28px;
+    font-size: 100%;
+    background-color: rgba(0,0,0,1);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.25s;
+    font-family: 'Lato', sans-serif;
+}
+
+.starter-confirmbtn:hover{
+    transform: scale(1.1);
+}
+
+.header-plan2{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 40%;
+    margin-top: 8%;
+    font-size: 200%;
+    font-family: 'Lato', sans-serif;
+}
+
+.middle-plan2{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 40%;
+    margin-top: 10%;
+    font-size: 150%;
+    font-family: 'Lato', sans-serif;
+}
+
+.capacity-plan2{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 27.9%;
+    margin-top: 11.5%;
+    font-size: 150%;
+    font-family: 'Lato', sans-serif;
+}
+
+.detail-starter2{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 39%;
+    margin-top: 16%;
+    font-size: 150%;
+    height: 550px;
+    font-family: 'Lato', sans-serif;
+}
+
+.starter-confirmbtn2{
+    margin-top: 41.5%;
+    border-color: white;
+    color: white;
+    padding: 14px 28px;
+    font-size: 100%;
+    background-color: rgba(0,0,0,1);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.25s;
+    font-family: 'Lato', sans-serif;
+}
+
+.starter-confirmbtn2:hover{
+    transform: scale(1.1);
+}
+
+.header-plan3{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 64%;
+    margin-top: 8%;
+    font-size: 200%;
+    font-family: 'Lato', sans-serif;
+}
+
+.middle-plan3{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 64%;
+    margin-top: 10%;
+    font-size: 150%;
+    font-family: 'Lato', sans-serif;
+}
+
+.capacity-plan3{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 52.2%;
+    margin-top: 11.5%;
+    font-size: 150%;
+    font-family: 'Lato', sans-serif;
+}
+
+.detail-starter3{
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    margin-left: 63%;
+    margin-top: 16%;
+    font-size: 150%;
+    height: 550px;
+    font-family: 'Lato', sans-serif;
+}
+
+.starter-confirmbtn3{
+    margin-top: 15.5%;
+    border-color: white;
+    color: white;
+    padding: 14px 28px;
+    font-size: 100%;
+    background-color: rgba(0,0,0,1);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.25s;
+    font-family: 'Lato', sans-serif;
+}
+
+.starter-confirmbtn3:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        display:none;
+    }
+    #mobile-container{
+        width: 1024px;
+        position: relative;
+        overflow-y: scroll;
+        height:1366px;
+        background-color: #262323;
+    }
+    #mb-starter-container {
+        width: 900px;
+        border: 2px solid black;
+        height: 640px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 6%;
+    }
+    #mb-starter-header {
+        color: white;
+        font-size: 480%;
+        margin-left: 5%;
+    }
+    #mb-starter-price{
+        color: white;
+        font-size: 370%;
+        margin-left: 5%;
+    }
+    .mb-starter-benefit{
+        color: white;
+        font-size: 320%;
+        margin-left: 4%;
+    }
+    #mb-starter-button {
+        text-align: center;
+        padding: 10px 30px;
+        margin-left: 30%;
+        color: white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 290%;
+    }
+
+    #mb-musician-container{
+        width:900px;
+        border: 2px solid black;
+        height:830px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 6%;
+    }
+    #mb-musician-header {
+        color: white;
+        font-size: 480%;
+        margin-left: 5%;
+    }
+    #mb-musician-price{
+        color: white;
+        font-size: 370%;
+        margin-left: 5%;
+    }
+    .mb-musician-benefit{
+        color: white;
+        font-size: 320%;
+        margin-left: 4%;
+    }
+    #mb-musician-button{
+        text-align: center;
+        padding: 10px 30px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 290%;
+    }
+    #mb-pro-container{
+        width:900px;
+        border: 2px solid black;
+        height:960px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 6%;
+    }
+    #mb-pro-header {
+        color: white;
+        font-size: 480%;
+        margin-left: 5%;
+    }
+    #mb-pro-price{
+        color: white;
+        font-size: 370%;
+        margin-left: 5%;
+    }
+    .mb-pro-benefit{
+        color: white;
+        font-size: 320%;
+        margin-left: 4%;
+    }
+    #mb-pro-button{
+        text-align: center;
+        padding: 10px 30px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 290%;
+    }
+    #footer{
+        margin-top: 20%;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #ffffff; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        display:none;
+    }
+    #mobile-container{
+        width: 768px;
+        position: relative;
+        overflow-y: scroll;
+        height:1024px;
+        background-color: #262323;
+    }
+    #mb-starter-container{
+        width: 685px;
+        border: 2px solid black;
+        height:515px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-starter-header {
+        color: white;
+        font-size: 350%;
+        margin-left: 5%;
+    }
+    #mb-starter-price{
+        color: white;
+        font-size: 290%;
+        margin-left: 5%;
+    }
+    .mb-starter-benefit{
+        color: white;
+        font-size: 260%;
+        margin-left: 4%;
+    }
+    #mb-starter-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 230%;
+    }
+
+    #mb-musician-container{
+        width:685px;
+        border: 2px solid black;
+        height:680px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-musician-header {
+        color: white;
+        font-size: 350%;
+        margin-left: 5%;
+    }
+    #mb-musician-price{
+        color: white;
+        font-size: 290%;
+        margin-left: 5%;
+    }
+    .mb-musician-benefit{
+        color: white;
+        font-size: 260%;
+        margin-left: 4%;
+    }
+    #mb-musician-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 230%;
+    }
+    #mb-pro-container{
+        width:685px;
+        border: 2px solid black;
+        height:800px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-pro-header {
+        color: white;
+        font-size: 350%;
+        margin-left: 5%;
+    }
+    #mb-pro-price{
+        color: white;
+        font-size: 290%;
+        margin-left: 5%;
+    }
+    .mb-pro-benefit{
+        color: white;
+        font-size: 260%;
+        margin-left: 4%;
+    }
+    #mb-pro-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 230%;
+    }
+    #footer{
+        margin-top: 20%;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #ffffff; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    
+}
+
+@media screen and (max-width: 540px){
+    .container{
+        display:none;
+    }
+    #mobile-container{
+        width: 540px;
+        position: relative;
+        overflow-y: scroll;
+        height:800px;
+        background-color: #262323;
+    }
+    #mb-starter-container{
+        width: 480px;
+        border: 2px solid black;
+        height:460px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-starter-header {
+        color: white;
+        font-size: 250%;
+        margin-left: 5%;
+    }
+    #mb-starter-price{
+        color: white;
+        font-size: 220%;
+        margin-left: 5%;
+    }
+    .mb-starter-benefit{
+        color: white;
+        font-size: 205%;
+        margin-left: 4%;
+    }
+    #mb-starter-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 180%;
+    }
+
+    #mb-musician-container{
+        width:480px;
+        border: 2px solid black;
+        height:615px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-musician-header {
+        color: white;
+        font-size: 250%;
+        margin-left: 5%;
+    }
+    #mb-musician-price{
+        color: white;
+        font-size: 220%;
+        margin-left: 5%;
+    }
+    .mb-musician-benefit{
+        color: white;
+        font-size: 205%;
+        margin-left: 4%;
+    }
+    #mb-musician-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 180%;
+    }
+    #mb-pro-container{
+        width:480px;
+        border: 2px solid black;
+        height:695px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-pro-header {
+        color: white;
+        font-size: 250%;
+        margin-left: 5%;
+    }
+    #mb-pro-price{
+        color: white;
+        font-size: 220%;
+        margin-left: 5%;
+    }
+    .mb-pro-benefit{
+        color: white;
+        font-size: 205%;
+        margin-left: 4%;
+    }
+    #mb-pro-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 180%;
+    }
+    #footer{
+        margin-top: 50%;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #ffffff; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    
+}
+
+@media screen and (max-width: 420px){
+    .container{
+        display:none;
+    }
+    #mobile-container{
+        width: 411px;
+        position: relative;
+        overflow-y: scroll;
+        height:800px;
+        background-color: #262323;
+    }
+    #mb-starter-container{
+        width: 360px;
+        border: 2px solid black;
+        height:390px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-starter-header {
+        color: white;
+        font-size: 190%;
+        margin-left: 5%;
+    }
+    #mb-starter-price{
+        color: white;
+        font-size: 180%;
+        margin-left: 5%;
+    }
+    .mb-starter-benefit{
+        color: white;
+        font-size: 160%;
+        margin-left: 4%;
+    }
+    #mb-starter-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 135%;
+    }
+
+    #mb-musician-container{
+        width:360px;
+        border: 2px solid black;
+        height:510px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-musician-header {
+        color: white;
+        font-size: 190%;
+        margin-left: 5%;
+    }
+    #mb-musician-price{
+        color: white;
+        font-size: 180%;
+        margin-left: 5%;
+    }
+    .mb-musician-benefit{
+        color: white;
+        font-size: 160%;
+        margin-left: 4%;
+    }
+    #mb-musician-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 135%;
+    }
+    #mb-pro-container{
+        width:360px;
+        border: 2px solid black;
+        height:595px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-pro-header {
+        color: white;
+        font-size: 190%;
+        margin-left: 5%;
+    }
+    #mb-pro-price{
+        color: white;
+        font-size: 180%;
+        margin-left: 5%;
+    }
+    .mb-pro-benefit{
+        color: white;
+        font-size: 160%;
+        margin-left: 4%;
+    }
+    #mb-pro-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 135%;
+    }
+    #footer{
+        margin-top: 50%;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #ffffff; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    
+}
+
+@media screen and (max-width: 375px) and (height: 812px){
+    .container{
+        display:none;
+    }
+    #mobile-container{
+        width: 375px;
+        position: relative;
+        overflow-y: scroll;
+        height:800px;
+        background-color: #262323;
+    }
+    #mb-starter-container{
+        width: 330px;
+        border: 2px solid black;
+        height:355px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-starter-header {
+        color: white;
+        font-size: 170%;
+        margin-left: 5%;
+    }
+    #mb-starter-price{
+        color: white;
+        font-size: 160%;
+        margin-left: 5%;
+    }
+    .mb-starter-benefit{
+        color: white;
+        font-size: 140%;
+        margin-left: 4%;
+    }
+    #mb-starter-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 120%;
+    }
+
+    #mb-musician-container{
+        width:330px;
+        border: 2px solid black;
+        height:475px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-musician-header {
+        color: white;
+        font-size: 170%;
+        margin-left: 5%;
+    }
+    #mb-musician-price{
+        color: white;
+        font-size: 160%;
+        margin-left: 5%;
+    }
+    .mb-musician-benefit{
+        color: white;
+        font-size: 140%;
+        margin-left: 4%;
+    }
+    #mb-musician-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 120%;
+    }
+    #mb-pro-container{
+        width:330px;
+        border: 2px solid black;
+        height:540px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-pro-header {
+        color: white;
+        font-size: 170%;
+        margin-left: 5%;
+    }
+    #mb-pro-price{
+        color: white;
+        font-size: 160%;
+        margin-left: 5%;
+    }
+    .mb-pro-benefit{
+        color: white;
+        font-size: 140%;
+        margin-left: 4%;
+    }
+    #mb-pro-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 120%;
+    }
+    #footer{
+        margin-top: 30%;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #ffffff; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    
+}
+
+
+@media screen and (max-width: 375px) and (height: 667px){
+    .container{
+        display:none;
+    }
+    #mobile-container{
+        width: 375px;
+        position: relative;
+        overflow-y: scroll;
+        height:800px;
+        background-color: #262323;
+    }
+    #mb-starter-container{
+        width: 330px;
+        border: 2px solid black;
+        height:355px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-starter-header {
+        color: white;
+        font-size: 170%;
+        margin-left: 5%;
+    }
+    #mb-starter-price{
+        color: white;
+        font-size: 160%;
+        margin-left: 5%;
+    }
+    .mb-starter-benefit{
+        color: white;
+        font-size: 140%;
+        margin-left: 4%;
+    }
+    #mb-starter-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 120%;
+    }
+
+    #mb-musician-container{
+        width:330px;
+        border: 2px solid black;
+        height:475px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-musician-header {
+        color: white;
+        font-size: 170%;
+        margin-left: 5%;
+    }
+    #mb-musician-price{
+        color: white;
+        font-size: 160%;
+        margin-left: 5%;
+    }
+    .mb-musician-benefit{
+        color: white;
+        font-size: 140%;
+        margin-left: 4%;
+    }
+    #mb-musician-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 120%;
+    }
+    #mb-pro-container{
+        width:330px;
+        border: 2px solid black;
+        height:540px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-pro-header {
+        color: white;
+        font-size: 170%;
+        margin-left: 5%;
+    }
+    #mb-pro-price{
+        color: white;
+        font-size: 160%;
+        margin-left: 5%;
+    }
+    .mb-pro-benefit{
+        color: white;
+        font-size: 140%;
+        margin-left: 4%;
+    }
+    #mb-pro-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 120%;
+    }
+    #footer{
+        margin-top: 70%;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #ffffff; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    
+}
+
+@media screen and (max-width: 320px){
+    .container{
+        display:none;
+    }
+    #mobile-container{
+        width: 320px;
+        position: relative;
+        overflow-y: scroll;
+        height:800px;
+        background-color: #262323;
+    }
+    #mb-starter-container{
+        width:280px;
+        border: 2px solid black;
+        height:330px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-starter-header {
+        color: white;
+        font-size: 160%;
+        margin-left: 5%;
+    }
+    #mb-starter-price{
+        color: white;
+        font-size: 140%;
+        margin-left: 5%;
+    }
+    .mb-starter-benefit{
+        color: white;
+        font-size: 120%;
+        margin-left: 4%;
+    }
+    #mb-starter-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 110%;
+    }
+
+    #mb-musician-container{
+        width:280px;
+        border: 2px solid black;
+        height:435px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-musician-header {
+        color: white;
+        font-size: 150%;
+        margin-left: 5%;
+    }
+    #mb-musician-price{
+        color: white;
+        font-size: 140%;
+        margin-left: 5%;
+    }
+    .mb-musician-benefit{
+        color: white;
+        font-size: 120%;
+        margin-left: 4%;
+    }
+    #mb-musician-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 110%;
+    }
+    #mb-pro-container{
+        width:280px;
+        border: 2px solid black;
+        height:500px;
+        background-color: rgba(0,0,0,0);
+        margin-top: 8%;
+        font-family: 'Lato', sans-serif;
+        margin-left: 5%;
+    }
+    #mb-pro-header {
+        color: white;
+        font-size: 150%;
+        margin-left: 5%;
+    }
+    #mb-pro-price{
+        color: white;
+        font-size: 140%;
+        margin-left: 5%;
+    }
+    .mb-pro-benefit{
+        color: white;
+        font-size: 120%;
+        margin-left: 4%;
+    }
+    #mb-pro-button{
+        text-align: center;
+        padding: 10px 10px;
+        margin-left: 30%;
+        color:white;
+        border-radius: 30px;
+        background-color: black;
+        border: 3px solid rgb(255, 255, 255);
+        font-size: 110%;
+    }
+    #footer{
+        margin-top: 110%;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #ffffff; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    
+}

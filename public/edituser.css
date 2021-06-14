@@ -1,0 +1,168 @@
+header {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    background-color: #34495E;
+    z-index: 2;
+  }
+  .logo {
+    font-size: 200%;
+    font-family: 'Zen Dots', cursive;
+    color:white;
+    margin-left: 2.5%;
+    padding: 1% 1% 1% 1%;
+  }
+
+body{
+    margin: auto auto auto auto;
+    overflow: hidden;
+}
+
+#songM:hover{
+    background-color: rgb(63, 59, 59);
+}
+
+.control-header{
+  margin: 3% auto auto 15%;
+}
+
+.container-header{
+  margin: 3% auto auto 8%;
+  font-size: 150%;
+}
+
+#add{
+  font-size: 300%;
+  margin-left: 60%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 97%;
+  margin-top: 2%;
+  margin: 2% auto auto 3%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 150%;
+  text-overflow: ellipsis;
+}
+
+th{
+  border: 1px solid #dddddd;
+  padding: 4px;
+  text-align: center;
+}
+td{
+  border: 1px solid #dddddd;
+  padding: 4px;
+  text-align: center;
+}
+
+.search{
+  outline: none;
+  width: 30%;
+  font-size: 110%;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: 'Noto Sans TC', sans-serif;
+  padding: 1% 1% 1% 3%;
+  background-image: url('https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png');
+  background-size: 5%;
+  background-repeat: no-repeat;
+  background-position: 2%;
+}
+
+.search::placeholder{
+  color:rgb(0, 0, 0);
+}
+
+
+.mode_pic{
+  width: 50%;
+  margin-left: 40%;
+}
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 13%; /* Set the width of the sidebar */ /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 0; /* Stay on top */
+  bottom: 1; /* Stay at the top */
+  left: 0;
+  position: absolute;
+  background-color: #385068; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: auto auto auto auto;
+  text-decoration: none;
+  font-size: 130%;
+  color: #ffffff;
+  display: block;
+  font-family: 'Mukta', sans-serif;
+  -webkit-text-size-adjust: auto;
+}
+
+.sub-add-btn{
+  font-size: 100%;
+  width: 15%;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  border:1px solid black;
+  border-radius: 12px;
+  outline: none;
+  transition: transform 0.5s;
+}
+
+#caution{
+  font-size: 150%;
+  color:red;
+  margin-top: 3%;
+}
+
+.sub-add-btn:hover{
+  background-color: rgb(47, 105, 172);
+  color: white;
+  transform: scale(1.1);
+}
+
+.container{
+  border : 1px solid black;
+  height: 900px;
+  margin: auto auto auto 10%;
+  text-align: center;
+  width: 90%;
+  transition: all 1s ease;
+}
+
+.header_add{
+  font-size: 300%;
+  font-family: 'Zen Dots', cursive;
+}
+
+.remove{
+  text-decoration: none;
+  color:red;
+}
+
+.edit{
+  text-decoration: none;
+  color:black;
+}
+
+.inp{
+  width: 31.2%;
+  font-size: 150%;
+}
+
+.text{
+  font-size: 150%;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

@@ -1,0 +1,1800 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(192, 189, 189);
+  font-family: 'Nunito Sans', sans-serif;
+  overflow: hidden;
+}
+
+#success-bar{
+  width: 35%;
+  padding: 12px 6px 6px 12px;
+  color: black;
+  font-size: 165%;
+  height: 40px;
+  background-color: rgb(255 255 255);
+  font-family: 'Ubuntu', sans-serif;
+  z-index: 1;
+  position: absolute;
+  margin-left: 62%;
+  margin-top: 35%;
+  opacity: 0.9;
+  transition: all 1s;
+  box-shadow: 0 0 10px 5px #147117;
+}
+
+.check{
+  color: #32ce32;
+  margin-right: 4%;
+}
+
+#fail-bar{
+  width: 35%;
+  padding: 12px 6px 6px 12px;
+  color: rgb(255, 12, 12);
+  font-size: 165%;
+  height: 40px;
+  background-color: rgb(255 255 255);
+  font-family: 'Ubuntu', sans-serif;
+  z-index: 1;
+  position: absolute;
+  margin-left: 62%;
+  margin-top: 35%;
+  opacity: 0.9;
+  transition: all 1s;
+  box-shadow: 0 0 10px 5px #6d3131;
+}
+
+.fail{
+  color: #d32020;
+  margin-right: 4%;
+}
+
+#verify-bar{
+  width: 35%;
+  padding: 12px 6px 6px 12px;
+  color: #fbff00;
+  font-size: 165%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: 'Ubuntu', sans-serif;
+  z-index: 1;
+  position: absolute;
+  margin-left: 62%;
+  margin-top: 35%;
+  opacity: 0.9;
+  transition: all 1s;
+  box-shadow: 0 0 10px 5px #000000;
+}
+
+.verify{
+  color: #fbff00;
+  margin-right: 4%;
+}
+
+.page_wrapper{
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 134, 219, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border: 1px solid #fff;
+  border-radius: auto;
+  color: #FF86DB;
+  font-size: 100%;
+  font-weight: 500;
+  padding: 15px 60px;
+  text-decoration: none;
+}
+
+.button:hover{
+  transition:transform 0.6s, color 2s, border 1.25s ease-out,font-size 1.25s;
+  transform: scale(1.25);
+  color: rgb(247, 66, 66);
+  border: 1px solid #311328;
+  font-size: 120%;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  background: #f4f8f7;
+  border: none;
+  font-weight: 300;
+  margin: 5px;
+  padding: 10px;
+  width: 280px;
+}
+
+.signinerr{
+  color:red; 
+  font-size: 100%; margin-left: -10%
+}
+
+.submit-btn{
+  border: none;
+  border-radius: 25px;
+  color: #FF86DB;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 15px 50px;
+  text-transform: uppercase;
+}
+
+#login .submit-btn {
+  background: #20181F;
+}
+
+#register .submit-btn {
+  background: #20181F;
+}
+
+#container {
+  background: #ededed;
+  border-radius: 15px;
+  height: 600px;
+  margin: 10% 10% 10% 10%;
+  overflow: hidden;
+  width: 80%;
+}
+
+.mobile-container{
+  background: #ededed;
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 500px;
+  margin: 10% 10% 10% 10%;
+  overflow: hidden;
+  width: 80%;
+}
+
+.social-login {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  height: 15px;
+  padding: 10px;
+  width: 15px;
+}
+
+#login {
+  background: #fff;
+  float: left;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  text-align: center;
+  top: -100%;
+  z-index: 0;
+}
+
+#register {
+  background: #fff;
+  float: right;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  text-align: center;
+  top: -100%;
+  z-index: 0;
+}
+
+#login h1,
+#register h1 {
+  padding: 20% 0 25px;
+}
+
+#login h1 {
+  color: black;
+}
+
+#register h1 {
+  color: black;
+}
+
+#login p,
+#register p {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  padding: 20px;
+}
+
+#forgot-pass {
+    color: #707070;
+    font-size: 100%;
+    margin-top: 10%;
+    margin-left: 0.5%;
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+}
+
+#reset-pass {
+  color: #000000;
+  font-size: 100%;
+  margin-top: 10%;
+  font-weight: 500;
+  margin-left: 9%;
+  text-align: left;
+}
+
+
+#cover {
+  background: #20181F;
+  color: #FF86DB;
+  height: 100%;
+  margin: 0 0 0 50%;
+  position: relative;
+  text-align: center;
+  transition: margin 1.5s, background 0.25s, display 1s, width 1s;
+  width: 50%;
+  z-index: 9;
+}
+
+#cover h1 {
+  padding-top: 30%;
+}
+
+#cover p {
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.sign-in {
+  display: none;
+}
+
+.sub {
+  position: relative;
+  top: auto;
+}
+
+#cover:target {
+  background: #20181F;
+  margin: 0;
+}
+
+#cover:target .sign-up-header {
+  display: none;
+}
+#cover:target .sign-up-bottom {
+  display: none;
+}
+
+#cover:target .sign-in {
+  display: inline-block; 
+}
+
+#cover:target .login-div {
+  width: 35%;
+}
+
+#credit {
+  color: #999;
+  font-size: 14px;
+}
+
+#info {
+  background: #eaeaea;
+  color: #555;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo{
+    height: auto;
+    width: 35%;
+    margin-top: 5%;
+}
+
+.logo_register{
+  height: auto;
+  width: 30%;
+  margin-top: 3%;
+}
+
+.header_signin{
+    margin-top: -20%;
+}
+
+.header_signup{
+  margin-top: -20%;
+}
+
+.sign-up-header{
+  font-size: 300%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.sign-up-bottom{
+  font-size: 150%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.sign-in-header{
+  font-size: 300%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.sign-in-bottom{
+  font-size: 150%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.inputer{
+  width: 78%; 
+  margin-left: auto;
+}
+
+.display_none{
+  display: none;
+}
+
+.login-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+}
+
+.register-wrapper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+}
+
+  #register1{
+    display: none;
+  }
+
+  #login1{
+    display:none;
+  }
+
+/* loader */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display:none;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+
+.loader {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 0;            /******** <- Remove this line *********/
+  border: 4px solid rgb(241, 81, 207);
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display:inline;
+  width: 100%;
+  background-color: rgb(241, 81, 207);
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+
+@media (max-width: 1024px){
+  #container {
+    background: #ededed;
+    border-radius: 15px;
+    height: 620px;
+    margin: 36% 10% 10% 5%;
+    overflow: hidden;
+    width: 90%;
+  }
+
+  #success-bar{
+    width: 88%;
+    padding: 12px 6px 6px 12px;
+    color: black;
+    font-size: 165%;
+    height: 40px;
+    background-color: rgb(255 255 255);
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 10;
+    position: absolute;
+    margin-left: 6%;
+    margin-top: 68%;
+    opacity: 0.9;
+    transition: all 1s;
+    box-shadow: 0 0 10px 5px #147117;
+  }
+  .check{
+    margin-left: 5%;
+    width: 11.44px;
+    margin-right: 9%;
+    height: 16px;
+    color: #32ce32;
+  }
+}
+
+@media screen and (max-width: 1024px){
+
+  .mobile-regis-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 1100px;
+    overflow: hidden;
+    width: 80%;
+    margin: 8% 10% 10% 10%;
+  }
+  .mobile-login-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 830px;
+    margin: 25% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+  #register-footer {
+    text-align: center;
+    font-size: 205%;
+  }
+
+  #login{
+    display:none;
+  }
+
+  #register{
+    display:none;
+  }
+
+  #login1{
+    display: block;
+  }
+
+  #gotosignin{
+      color:#FF86DB;
+      text-decoration: underline;
+  }
+  #gotosignup{
+    color:#FF86DB;
+    text-decoration: underline;
+}
+
+  .logo {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .logo_register{
+    width: 40%;
+    margin-left: 30%;
+  }
+  .header_signin {
+    font-size: 230%;
+    margin-top: 0%;
+    margin-left: 28%;
+  }
+
+  .header_signup {
+    font-size: 240%;
+    margin-top: 0%;
+    margin-left: 29%;
+  }
+
+
+  .fa{
+    margin-left: 7%;
+    width: 11.44px;
+    height: 16px;
+  }
+
+  #register1{
+    display:none;
+  }
+
+  #cover{
+    display: none;
+  }
+
+  #container{
+    background-color: rgba(243, 243, 243,0);
+  }
+
+  input[type="email"], input[type="password"], input[type="text"] {
+    background: #f4f8f7;
+    border: none;
+    margin-left: 17%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 179%;
+    width: 563px;
+  }
+
+  #name {
+    font-size: 180%;
+    margin: 5% auto auto 3%;
+    width: 78%;
+  }
+
+  #password1-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 180%;
+    width: 78%;
+  }
+
+  #password2-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 180%;
+    width: 78%;
+  }
+
+  #userpic{
+    font-size: 170%;
+  }
+
+
+  #forgot-pass{
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 80%;
+    margin-top: 10%;
+    margin-left: 13%;
+    text-align: left;
+  }
+
+  .submit-btn {
+    border: none;
+    border-radius: 25px;
+    color: #FF86DB;
+    cursor: pointer;
+    font-size: 220%;
+    letter-spacing: 1px;
+    margin-top: 3%;
+    padding: 10px 60px;
+    text-transform: uppercase;
+    background: #20181F;
+    margin-left: 35%;
+  }
+
+  .gosignup {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 200%;
+  }
+
+  #success-bar{
+    width: 100%;
+    padding: 12px 6px 6px 12px;
+    color: black;
+    font-size: 165%;
+    height: 40px;
+    background-color: rgb(255 255 255);
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 10;
+    position: absolute;
+    margin-top: 134%;
+    opacity: 0.9;
+    transition: all 1s;
+    margin-left: 0%;
+    box-shadow: 0 0 10px 5px #147117;
+  }
+
+  .check{
+    margin-left: 5%;
+    width: 11.44px;
+    margin-right: 9%;
+    height: 16px;
+    color: #32ce32;
+  }
+  #forgot-pass {
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 180%;
+    margin-top: 10%;
+    margin-left: 17%;
+    color: black;
+    text-align: left;
+  }
+  .signinerr {
+    color: red;
+    font-size: 195%;
+    margin-left: 17%;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+  .mobile-regis-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 910px;
+    overflow: hidden;
+    width: 80%;
+    margin: 8% 10% 10% 10%;
+  }
+  .mobile-login-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 660px;
+    margin: 22% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+  #register-footer {
+    text-align: center;
+    font-size: 185%;
+  }
+
+  #login{
+    display:none;
+  }
+
+  #register{
+    display:none;
+  }
+
+  #userpic{
+    font-size: 160%;
+  }
+
+  #login1{
+    display: block;
+  }
+
+  #gotosignin{
+      color:#FF86DB;
+      text-decoration: underline;
+  }
+  #gotosignup{
+    color:#FF86DB;
+    text-decoration: underline;
+}
+
+  .logo {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .logo_register{
+    width: 40%;
+    margin-left: 30%;
+  }
+  .header_signin {
+    font-size: 200%;
+    margin-top: 0%;
+    margin-left: 22%;
+  }
+
+  .header_signup {
+    font-size: 240%;
+    margin-top: 0%;
+    margin-left: 20%;
+  }
+
+
+  .fa{
+    margin-left: 7%;
+    width: 11.44px;
+    height: 16px;
+  }
+
+  #register1{
+    display:none;
+  }
+
+  #cover{
+    display: none;
+  }
+
+  #container{
+    background-color: rgba(243, 243, 243,0);
+  }
+
+  input[type="email"], input[type="password"], input[type="text"] {
+    background: #f4f8f7;
+    border: none;
+    margin-left: 16%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 160%;
+    width: 420px;
+  }
+
+  #name {
+    font-size: 150%;
+    margin: 5% auto auto 3%;
+    width: 70%;
+  }
+
+  #password1-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 150%;
+    width: 70%;
+  }
+
+  #password2-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 150%;
+    width: 70%;
+  }
+
+
+  #forgot-pass{
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 80%;
+    margin-top: 10%;
+    margin-left: 13%;
+    text-align: left;
+  }
+
+  .submit-btn {
+    border: none;
+    border-radius: 25px;
+    color: #FF86DB;
+    cursor: pointer;
+    font-size: 190%;
+    letter-spacing: 1px;
+    margin-top: 3%;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    background: #20181F;
+    margin-left: 30%;
+  }
+
+  .gosignup {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 180%;
+  }
+
+  #success-bar{
+    width: 100%;
+    padding: 12px 6px 6px 12px;
+    color: black;
+    font-size: 165%;
+    height: 40px;
+    background-color: rgb(255 255 255);
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 10;
+    position: absolute;
+    margin-top: 134%;
+    opacity: 0.9;
+    transition: all 1s;
+    margin-left: 0%;
+    box-shadow: 0 0 10px 5px #147117;
+  }
+
+  .check{
+    margin-left: 5%;
+    width: 11.44px;
+    margin-right: 9%;
+    height: 16px;
+    color: #32ce32;
+  }
+  #forgot-pass {
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 150%;
+    margin-top: 10%;
+    margin-left: 16%;
+    color: black;
+    text-align: left;
+  }
+  .signinerr {
+    color: red;
+    font-size: 170%;
+    margin-left: 16%;
+  }
+}
+
+@media screen and (max-width: 540px){
+
+  .mobile-regis-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 685px;
+    overflow: hidden;
+    width: 80%;
+    margin: 3% 10% 10% 10%;
+  }
+  .mobile-login-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 560px;
+    margin: 15% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+  #register-footer {
+    text-align: center;
+    font-size: 145%;
+  }
+
+  #login{
+    display:none;
+  }
+
+  #register{
+    display:none;
+  }
+
+  #login1{
+    display: block;
+  }
+
+  #gotosignin{
+      color:#FF86DB;
+      text-decoration: underline;
+  }
+  #gotosignup{
+    color:#FF86DB;
+    text-decoration: underline;
+}
+
+  .logo {
+    width: 50%;
+    margin-left: 24%;
+  }
+
+  .logo_register{
+    width: 40%;
+    margin-left: 30%;
+  }
+  .header_signin {
+    font-size: 165%;
+    margin-top: 2%;
+    margin-left: 16%;
+  }
+
+  .header_signup {
+    font-size: 175%;
+    margin-top: 0%;
+    margin-left: 19%;
+  }
+
+
+  .fa{
+    margin-left: 7%;
+    width: 11.44px;
+    height: 16px;
+  }
+
+  #register1{
+    display:none;
+  }
+
+  #cover{
+    display: none;
+  }
+
+  #container{
+    background-color: rgba(243, 243, 243,0);
+  }
+
+  input[type="email"], input[type="password"], input[type="text"] {
+    background: #f4f8f7;
+    border: none;
+    margin-left: 12%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 120%;
+    width: 310px;
+  }
+
+  #name {
+    font-size: 120%;
+    margin: 5% auto auto 3%;
+    width: 70%;
+  }
+
+  #password1-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 120%;
+    width: 70%;
+  }
+
+  #password2-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 120%;
+    width: 70%;
+  }
+
+
+  #forgot-pass{
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 80%;
+    margin-top: 10%;
+    margin-left: 13%;
+    text-align: left;
+  }
+
+  .submit-btn {
+    border: none;
+    border-radius: 25px;
+    color: #FF86DB;
+    cursor: pointer;
+    font-size: 130%;
+    letter-spacing: 1px;
+    margin-top: 2%;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    background: #20181F;
+    margin-left: 30%;
+  }
+
+  .gosignup {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 150%;
+  }
+
+  #success-bar{
+    width: 100%;
+    padding: 12px 6px 6px 12px;
+    color: black;
+    font-size: 165%;
+    height: 40px;
+    background-color: rgb(255 255 255);
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 10;
+    position: absolute;
+    margin-top: 134%;
+    opacity: 0.9;
+    transition: all 1s;
+    margin-left: 0%;
+    box-shadow: 0 0 10px 5px #147117;
+  }
+
+  .check{
+    margin-left: 5%;
+    width: 11.44px;
+    margin-right: 9%;
+    height: 16px;
+    color: #32ce32;
+  }
+  #forgot-pass {
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 135%;
+    margin-top: 10%;
+    margin-left: 14%;
+    color: black;
+    text-align: left;
+  }
+  .signinerr {
+    color: red;
+    font-size: 135%;
+    margin-left: 13%;
+  }
+}
+
+@media screen and (max-width: 420px){
+
+  .mobile-regis-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 650px;
+    margin: 10% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+  .mobile-login-container{
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 530px;
+    margin: 20% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+
+  #register-footer {
+    text-align: center;
+    font-size: 130%;
+  }
+  
+
+  #login{
+    display:none;
+  }
+
+  #register{
+    display:none;
+  }
+
+  #login1{
+    display: block;
+  }
+
+  #gotosignin{
+      color:#FF86DB;
+      text-decoration: underline;
+  }
+  #gotosignup{
+    color:#FF86DB;
+    text-decoration: underline;
+}
+
+  .logo{
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .logo_register{
+    width: 40%;
+    margin-left: 30%;
+  }
+  .header_signin {
+    font-size: 145%;
+    margin-top: 2%;
+    margin-left: 13%;
+  }
+
+  .header_signup {
+    font-size: 140%;
+    margin-top: 2%;
+    margin-left: 20%;
+  } 
+
+
+  .fa{
+    margin-left: 7%;
+    width: 11.44px;
+    height: 16px;
+  }
+
+  #register1{
+    display:none;
+  }
+
+  #cover{
+    display: none;
+  }
+
+  #container{
+    background-color: rgba(243, 243, 243,0);
+  }
+
+  input[type="email"],input[type="password"],input[type="text"]{
+  background: #f4f8f7;
+  border: none;
+  margin-left: 12%;
+  font-weight: 300;
+  padding: 10px;
+  width: 240px;
+  }
+
+  #name{
+    font-size: 125%;
+    margin: 5% auto auto 3%;
+    width: 70%;
+  }
+
+  #password1-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 125%;
+    width: 70%;
+  }
+
+  #password2-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 125%;
+    width: 70%;
+  }
+
+
+  #forgot-pass{
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 80%;
+    margin-top: 10%;
+    margin-left: 13%;
+    text-align: left;
+  }
+
+  .submit-btn {
+    border: none;
+    border-radius: 25px;
+    color: #FF86DB;
+    cursor: pointer;
+    font-size: 120%;
+    letter-spacing: 1px;
+    margin-top: 4%;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    background: #20181F;
+    margin-left: 24%;
+  }
+
+  .gosignup {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 120%;
+  }
+
+
+  #success-bar{
+    width: 100%;
+    padding: 12px 6px 6px 12px;
+    color: black;
+    font-size: 165%;
+    height: 40px;
+    background-color: rgb(255 255 255);
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 10;
+    position: absolute;
+    margin-top: 134%;
+    opacity: 0.9;
+    transition: all 1s;
+    margin-left: 0%;
+    box-shadow: 0 0 10px 5px #147117;
+  }
+
+  .check{
+    margin-left: 5%;
+    width: 11.44px;
+    margin-right: 9%;
+    height: 16px;
+    color: #32ce32;
+  }
+  #forgot-pass {
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 120%;
+    margin-top: 10%;
+    margin-left: 16%;
+    color: black;
+    text-align: left;
+  }
+  .signinerr {
+    color: red;
+    font-size: 120%;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 375px) and (height: 667px){
+
+  .mobile-regis-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 610px;
+    margin: 10% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+  .mobile-login-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 590px;
+    margin: 10% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+
+  #login1{
+    display: block;
+  }
+
+  #gotosignin{
+      color:#FF86DB;
+      text-decoration: underline;
+  }
+  #gotosignup{
+    color:#FF86DB;
+    text-decoration: underline;
+}
+
+  .logo{
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .logo_register{
+    width: 40%;
+    margin-left: 30%;
+  }
+  .header_signin {
+    font-size: 140%;
+    margin-top: 2%;
+    margin-left: 9%;
+  }
+
+  .header_signup{
+    font-size: 100%;
+    margin-top: 2%;
+    margin-left: 25%;
+  }
+
+
+  .fa{
+    margin-left: 7%;
+    width: 11.44px;
+    height: 16px;
+  }
+
+  #register1{
+    display:none;
+  }
+
+  #cover{
+    display: none;
+  }
+
+  #container{
+    background-color: rgba(243, 243, 243,0);
+  }
+
+  input[type="email"],input[type="password"],input[type="text"]{
+  background: #f4f8f7;
+  border: none;
+  margin-left: 13%;
+  font-weight: 300;
+  padding: 10px;
+  width: 200px;
+  }
+
+  #name{
+    font-size: 110%;
+    margin: 5% auto auto 3%;
+    width: 70%;
+  }
+
+  #password1-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 110%;
+    width: 70%;
+  }
+
+  #password2-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 110%;
+    width: 70%;
+  }
+
+
+  #forgot-pass{
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 80%;
+    margin-top: 10%;
+    margin-left: 13%;
+    text-align: left;
+  }
+
+  .submit-btn {
+    border: none;
+    border-radius: 25px;
+    color: #FF86DB;
+    cursor: pointer;
+    font-size: 90%;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    background: #20181E;
+    margin-left: 26%;
+  }
+
+  .gosignup{
+    text-align: center;
+    margin-top: 7%;
+  }
+
+  
+
+  #success-bar {
+    width: 100%;
+    padding: 12px 6px 6px 12px;
+    color: black;
+    font-size: 165%;
+    height: 40px;
+    background-color: rgb(255 255 255);
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 10;
+    position: absolute;
+    margin-top: 126%;
+    opacity: 0.9;
+    transition: all 1s;
+    margin-left: 0%;
+    box-shadow: 0 0 10px 5px #147117;
+  }
+
+  .check{
+    margin-left: 5%;
+    width: 11.44px;
+    margin-right: 9%;
+    height: 16px;
+    color: #32ce32;
+  }
+  #forgot-pass {
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 110%;
+    margin-top: 10%;
+    margin-left: 16%;
+    color: black;
+    text-align: left;
+  }
+  .signinerr {
+    color: red;
+    font-size: 110%;
+    margin-left: 10%;
+  }
+  #register-footer {
+    text-align: center;
+    font-size: 115%;
+  }
+  
+}
+
+@media screen and (max-width: 375px) and (height: 812px){
+
+  .mobile-regis-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 640px;
+    margin: 20% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+  #space-header{
+    margin-top: 15%;
+  }
+  .mobile-login-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 600px;
+    margin: 30% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+  
+
+  #login1{
+    display: block;
+  }
+
+  #gotosignin{
+      color:#FF86DB;
+      text-decoration: underline;
+  }
+  #gotosignup{
+    color:#FF86DB;
+    text-decoration: underline;
+}
+
+  .logo{
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .logo_register{
+    width: 40%;
+    margin-left: 30%;
+  }
+  .header_signin {
+    font-size: 140%;
+    margin-top: 2%;
+    margin-left: 8%;
+  }
+
+  .header_signup {
+    font-size: 130%;
+    margin-top: 2%;
+    margin-left: 17%;
+  }
+
+  .fa{
+    margin-left: 7%;
+    width: 11.44px;
+    height: 16px;
+  }
+
+  #register1{
+    display:none;
+  }
+
+  #cover{
+    display: none;
+  }
+
+  #container{
+    background-color: rgba(243, 243, 243,0);
+  }
+
+  input[type="email"],input[type="password"],input[type="text"]{
+  background: #f4f8f7;
+  border: none;
+  margin-left: 13%;
+  font-weight: 300;
+  padding: 10px;
+  width: 200px;
+  }
+
+  #name {
+    font-size: 120%;
+    margin: 5% auto auto 3%;
+    width: 70%;
+  }
+
+  #password1-mobile{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 120%;
+    width: 70%;
+  }
+
+  #password2-mobile {
+    background: #f4f8f7;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-weight: 300;
+    padding: 10px;
+    font-size: 120%;
+    width: 70%;
+  }
+
+
+  #forgot-pass{
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 80%;
+    margin-top: 10%;
+    margin-left: 13%;
+    text-align: left;
+  }
+
+  .submit-btn {
+    border: none;
+    border-radius: 25px;
+    color: #FF86DB;
+    cursor: pointer;
+    font-size: 100%;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    background: #20181F;
+    margin-left: 26%;
+  }
+
+  .gosignup{
+    text-align: center;
+    margin-top: 7%;
+  }
+
+
+  #success-bar {
+    width: 100%;
+    padding: 12px 6px 6px 12px;
+    color: black;
+    font-size: 165%;
+    height: 40px;
+    background-color: rgb(255 255 255);
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 10;
+    position: absolute;
+    margin-top: 164%;
+    opacity: 0.9;
+    transition: all 1s;
+    margin-left: 0%;
+    box-shadow: 0 0 10px 5px #147117;
+  }
+
+  #register-footer {
+    text-align: center;
+    font-size: 115%;
+  }
+
+  .check{
+    margin-left: 5%;
+    width: 11.44px;
+    margin-right: 9%;
+    height: 16px;
+    color: #32ce32;
+  }
+  #forgot-pass {
+    border-bottom: 1px solid #ccc;
+    color: #707070;
+    font-size: 110%;
+    margin-top: 10%;
+    margin-left: 16%;
+    color: black;
+    text-align: left;
+  }
+  .signinerr {
+    color: red;
+    font-size: 110%;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 320px){
+
+  #success-bar {
+    width: 100%;
+    padding: 12px 6px 6px 12px;
+    color: black;
+    font-size: 165%;
+    height: 40px;
+    background-color: rgb(255 255 255);
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 10;
+    position: absolute;
+    margin-top: 122%;
+    opacity: 0.9;
+    transition: all 1s;
+    margin-left: 0%;
+    box-shadow: 0 0 10px 5px #147117;
+  }
+
+  .check{
+    margin-left: 5%;
+    width: 11.44px;
+    margin-right: 9%;
+    height: 16px;
+    color: #32ce32;
+  }
+
+  .mobile-regis-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 535px;
+    margin: 5% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+  .mobile-login-container {
+    background: #ededed;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 500px;
+    margin: 10% 10% 10% 10%;
+    overflow: hidden;
+    width: 80%;
+  }
+
+    #login1{
+      display: block;
+    }
+
+    #gotosignin{
+        color:#FF86DB;
+        text-decoration: underline;
+    }
+    #gotosignup{
+      color:#FF86DB;
+      text-decoration: underline;
+  }
+
+    .logo{
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .logo_register{
+      width: 40%;
+      margin-left: 28%;
+    }
+    .header_signin {
+      font-size: 121%;
+      margin-top: 2%;
+      margin-left: 8%;
+    }
+
+    .header_signup{
+      font-size: 100%;
+      margin-top: 2%;
+      margin-left: 18%;
+    }
+
+
+    .fa{
+      margin-left: 5%;
+      width: 11.44px;
+      height: 16px;
+    }
+
+    #register1{
+      display:none;
+    }
+
+    #cover{
+      display: none;
+    }
+
+    #container{
+      background-color: rgba(243, 243, 243,0);
+    }
+
+    #password1-mobile{
+      background: #f4f8f7;
+      border: none;
+      margin-left: 3%;
+      margin-top: 4%;
+      font-weight: 300;
+      padding: 10px;
+      font-size: 90%;
+      width: 70%;
+    }
+
+    #password2-mobile{
+      background: #f4f8f7;
+      border: none;
+      margin-left: 3%;
+      margin-top: 4%;
+      font-weight: 300;
+      padding: 10px;
+      font-size: 90%;
+      width: 70%;
+    }
+
+    input[type="email"],input[type="password"],input[type="text"]{
+    background: #f4f8f7;
+    border: none;
+    margin-left: 6%;
+    font-weight: 300;
+    padding: 10px;
+    width: 200px;
+    }
+
+    #name {
+      font-size: 90%;
+      margin: 5% auto auto 3%;
+      width: 70%;
+    }
+
+    #register-footer {
+      text-align: center;
+      font-size: 115%;
+    }
+
+    #forgot-pass{
+      border-bottom: 1px solid #ccc;
+      color: #707070;
+      font-size: 100%;
+      margin-top: 10%;
+      margin-left: 13%;
+      color:black;
+      text-align: left;
+      }
+
+
+      .submit-btn {
+        border: none;
+        border-radius: 25px;
+        color: #FF86DB;
+        cursor: pointer;
+        font-size: 85%;
+        letter-spacing: 1px;
+        margin-top: 15px;
+        padding: 15px 40px;
+        text-transform: uppercase;
+        background: #20181F;
+        margin-left: 20%;
+      }
+
+    .gosignup{
+      text-align: center;
+      margin-top: 7%;
+    }
+    .signinerr {
+      color: red;
+      font-size: 100%;
+      margin-left: 7%;
+  }
+  #space-header{
+    margin-top: 15%;
+  }
+}

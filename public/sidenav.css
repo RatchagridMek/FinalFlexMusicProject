@@ -1,0 +1,808 @@
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 13%; /* Set the width of the sidebar */
+    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 0; /* Stay on top */
+    bottom: 1; /* Stay at the top */
+    left: 0;
+    background-color: #262323; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    text-align: center;
+    border-right: 5px solid black;
+  }
+  
+  #favourite{
+    margin-top: 25%;
+    margin-left: 7%;
+    font-size: 180%;
+  }
+
+
+  /* The navigation menu links */
+  .sidenav a {
+    padding: auto auto auto auto;
+    text-decoration: none;
+    font-size: 200%;
+    color: #ffffff;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-size-adjust: auto;
+  }
+  
+  #navbar-favlist{
+    text-align: left;
+    font-size: 140%;
+    margin-top: 3%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  #navbar-favlist-header{
+    color: #cf97ca;
+    text-align: left;
+    font-size: 200%;
+    margin-top: 3%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #cf97cc;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .Plist{
+    bottom: 3%;
+    left: 1%;
+    margin-top: 25%;
+    padding: 0.5% 2%;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+
+  .save_btn{
+    background-color: rgb(247, 247, 247);
+    color:rgb(244, 24, 252);
+    border: none;
+    margin-left: 13%;
+    margin-top: 14%;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+  }
+  
+  .save_btn:hover{
+    background-color: rgb(236, 181, 238);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.7s, color 0.45s;
+  }
+
+  
+.container2{
+  text-align: center;
+  background-color: rgb(66, 65, 65);
+  border : 1px solid black;
+  height: 350px;
+  margin: 10% auto;
+  overflow: hidden;
+  width: 42%;
+}
+
+.pic{
+  width: 32%;
+  height: auto;
+  margin-top: 7%;
+  margin-left: -50%;
+  border: 1px solid rgb(255, 250, 250);
+}
+
+
+.inp{
+  outline: none;
+  width: 20%;
+  font-size: 140%;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: rgb(218, 69, 156,0);
+  padding: 0.5% 0.5% 0.5% 1.25%;
+  color: rgb(236, 181, 238);
+  font-family: 'Righteous', cursive;
+  margin-left: 2%;
+  margin-top: 3%;
+  position: fixed;
+}
+
+.inp2{
+  outline: none;
+  width: 20%;
+  height: 10%;
+  font-size: 140%;
+  border-radius: 5px;
+  background-color: rgb(218, 69, 156,0);
+  padding: 0% 0.5% 0.5% 1.25%;
+  color: rgb(236, 181, 238);
+  font-family: 'Righteous', cursive;
+  margin-left: 2%;
+  margin-top: 7%;
+  position: fixed;
+  resize: none;
+}
+
+.fav-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display:none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  overflow: visible;
+}
+
+
+
+@media screen and (max-width: 1920px){
+  .unshow{
+    display:block;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .container2 {
+    text-align: center;
+    background-color: rgb(66, 65, 65);
+    border: 1px solid black;
+    height: 600px;
+    margin: 10% auto;
+    overflow: hidden;
+    width: 55%;
+  }
+  .inp2 {
+    outline: none;
+    width: 30%;
+    height: 10%;
+    font-size: 155%;
+    border-radius: 5px;
+    background-color: rgb(218, 69, 156,0);
+    padding: 0% 0.5% 0.5% 1.25%;
+    color: rgb(236, 181, 238);
+    font-family: 'Righteous', cursive;
+    margin-left: -23%;
+    margin-top: 28%;
+    position: fixed;
+    resize: none;
+    border: 1px solid black;
+  }
+  .inp {
+    outline: none;
+    width: 30%;
+    font-size: 155%;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(218, 69, 156,0);
+    padding: 0.5% 0.5% 0.5% 1.25%;
+    color: rgb(236, 181, 238);
+    font-family: 'Righteous', cursive;
+    margin-left: -23%;
+    margin-top: 23%;
+    position: fixed;
+  }
+  .pic {
+    width: 32%;
+    height: auto;
+    margin-top: 4%;
+    margin-left: 1%;
+    border: 1px solid rgb(255, 250, 250);
+  }
+  .save_btn {
+    background-color: rgb(247, 247, 247);
+    color: rgb(244, 24, 252);
+    border: none;
+    margin-left: -17%;
+    margin-top: 37%;
+    padding: 3px 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .save_btn {
+    background-color: rgb(247, 247, 247);
+    color: rgb(244, 24, 252);
+    border: none;
+    margin-left: -17%;
+    margin-top: 39%;
+    padding: 3px 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .sidenav a{
+    font-size: 260%;
+  }
+  .Plist{
+    border:none;
+  }
+  .container2 {
+    width: 75%;
+    height: 65%;
+    margin-bottom: 20%;
+    }
+  .pic{
+    width: 45%;
+    margin-left: 0%;
+  }
+  .inp {
+    margin-top: 44%;
+    margin-left: -46%;
+    font-size: 175%;
+    width: 60%;
+  }
+  
+  .inp2 {
+    margin-top: 52%;
+    margin-left: -46%;
+    width: 60%;
+    height: 13%;
+    font-size: 170%;
+    border: 1px solid black;
+  }
+  .save_btn {
+    font-size: 200%;
+    margin-top: 73%;
+    padding: 10px 1px;
+    width: 37%;
+    margin-left: -35%;
+    background-color: rgba(247,247,247,1);
+  }
+  #favourite{
+    margin-top: 25%;
+    margin-left: 4%;
+    font-size: 170%;
+  }
+  .sidenav{
+    z-index: 5;
+    width: 15%;
+  }
+  #navbar-favlist-header {
+    color: #cf97ca;
+    text-align: left;
+    font-size: 170%;
+    margin-top: 0%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #navbar-favlist {
+    text-align: left;
+    font-size: 140%;
+    margin-top: 5%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidenav a{
+    font-size: 170%;
+  }
+  .Plist{
+    border:none;
+  }
+  .container2 {
+    width: 75%;
+    height: 65%;
+    margin-bottom: 20%;
+  }
+  .pic{
+    width: 45%;
+    margin-left: 0%;
+  }
+  .inp {
+    margin-top: 44%;
+    margin-left: -46%;
+    font-size: 130%;
+    width: 60%;
+  }
+  
+  .inp2 {
+    margin-top: 52%;
+    margin-left: -46%;
+    width: 60%;
+    height: 13%;
+    font-size: 120%;
+    border: 1px solid black;
+  }
+  .save_btn {
+    font-size: 145%;
+    margin-top: 73%;
+    padding: 10px 1px;
+    width: 37%;
+    margin-left: -35%;
+    background-color: rgba(247,247,247,1);
+  }
+  #favourite{
+    margin-top: 25%;
+    margin-left: 4%;
+    font-size: 130%;
+  }
+  .sidenav{
+    z-index: 5;
+    width: 15%;
+  }
+  #navbar-favlist-header {
+    color: #cf97ca;
+    text-align: left;
+    font-size: 155%;
+    margin-top: 0%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #navbar-favlist {
+    text-align: left;
+    font-size: 120%;
+    margin-top: 5%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .sidenav a{
+    font-size: 170%;
+  }
+  .Plist{
+    border:none;
+  }
+  .container2 {
+    width: 75%;
+    height: 74%;
+  }
+  .pic{
+    width: 45%;
+    margin-left: 0%;
+  }
+  .inp {
+    margin-top: 44%;
+    margin-left: -46%;
+    font-size: 120%;
+    width: 60%;
+  }
+  
+  .inp2 {
+    margin-top: 55%;
+    margin-left: -46%;
+    width: 60%;
+    height: 15%;
+    font-size: 110%;
+    border: 1px solid black;
+  }
+  .save_btn {
+    font-size: 120%;
+    margin-top: 82%;
+    padding: 10px 1px;
+    width: 40%;
+    margin-left: -36%;
+    background-color: rgba(247,247,247,1);
+  }
+  #favourite{
+    margin-top: 25%;
+    margin-left: 4%;
+    font-size: 130%;
+  }
+  .sidenav{
+    z-index: 5;
+    width: 30%;
+    display: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-right: 0px solid black;
+  }
+  .unshow{
+    display:none;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  .show{
+    display:block;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  #navbar-favlist-header {
+    color: #cf97ca;
+    text-align: left;
+    font-size: 170%;
+    margin-top: 0%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #navbar-favlist {
+    text-align: left;
+    font-size: 140%;
+    margin-top: 5%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .sidenav a{
+    font-size: 187%;
+  }
+  .Plist{
+    border:none;
+  }
+  .container2{
+    width: 75%;
+    height: 60%;
+  }
+  .pic{
+    width: 45%;
+    margin-left: 0%;
+  }
+  .inp {
+    margin-top: 44%;
+    margin-left: -46%;
+    font-size: 120%;
+    width: 60%;
+  }
+  
+  .inp2 {
+    margin-top: 60%;
+    margin-left: -46%;
+    width: 60%;
+    height: 15%;
+    font-size:110%;
+    border: 1px solid black;
+  }
+  .save_btn {
+    font-size: 120%;
+    margin-top: 89%;
+    padding: 10px 1px;
+    width: 40%;
+    margin-left: -36%;
+    background-color: rgba(247,247,247,1);
+  }
+  #favourite{
+    margin-top: 25%;
+    margin-left: 4%;
+    font-size: 130%;
+  }
+  .sidenav{
+    z-index: 5;
+    width: 30%;
+    display: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .unshow{
+    display:none;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  .show{
+    display:block;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  #navbar-favlist-header {
+    color: #cf97ca;
+    text-align: left;
+    font-size: 150%;
+    margin-top: 0%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #navbar-favlist {
+    text-align: left;
+    font-size: 120%;
+    margin-top: 5%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 375px) and (height: 667px){
+  .sidenav a{
+    font-size: 170%;
+  }
+  .Plist{
+    border:none;
+  }
+  .container2{
+    width: 75%;
+    height: 60%;
+  }
+  .pic{
+    width: 45%;
+    margin-left: 0%;
+  }
+  .inp {
+    margin-top: 44%;
+    margin-left: -46%;
+    font-size: 120%;
+    width: 60%;
+  }
+  
+  .inp2 {
+    margin-top: 60%;
+    margin-left: -46%;
+    width: 60%;
+    height: 15%;
+    font-size:110%;
+    border: 1px solid black;
+  }
+  .save_btn {
+    font-size: 120%;
+    margin-top: 89%;
+    padding: 10px 1px;
+    width: 40%;
+    margin-left: -36%;
+    background-color: rgba(247,247,247,1);
+  }
+  #favourite{
+    margin-top: 25%;
+    margin-left: 4%;
+    font-size: 130%;
+  }
+  .sidenav{
+    z-index: 5;
+    width: 30%;
+    display: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .unshow{
+    display:none;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  .show{
+    display:block;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  #navbar-favlist-header {
+    color: #cf97ca;
+    text-align: left;
+    font-size: 134%;
+    margin-top: 0%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #navbar-favlist {
+    text-align: left;
+    font-size: 110%;
+    margin-top: 5%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 375px) and (height: 812px){
+  .sidenav a{
+    font-size: 170%;
+  }
+  .Plist{
+    border:none;
+  }
+  .container2{
+    width: 75%;
+    height: 60%;
+  }
+  .pic{
+    width: 45%;
+    margin-left: 0%;
+  }
+  .inp {
+    margin-top: 44%;
+    margin-left: -46%;
+    font-size: 120%;
+    width: 60%;
+  }
+  
+  .inp2 {
+    margin-top: 60%;
+    margin-left: -46%;
+    width: 60%;
+    height: 15%;
+    font-size:110%;
+    border: 1px solid black;
+  }
+  .save_btn {
+    font-size: 130%;
+    margin-top: 96%;
+    padding: 10px 1px;
+    width: 40%;
+    margin-left: -36%;
+    background-color: rgba(247,247,247,1);
+  }
+  #favourite{
+    margin-top: 25%;
+    margin-left: 4%;
+    font-size: 130%;
+  }
+  .sidenav{
+    z-index: 5;
+    width: 30%;
+    display: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .unshow{
+    display:none;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  .show{
+    display:block;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  #navbar-favlist-header {
+    color: #cf97ca;
+    text-align: left;
+    font-size: 134%;
+    margin-top: 0%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #navbar-favlist {
+    text-align: left;
+    font-size: 110%;
+    margin-top: 5%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .sidenav a{
+    font-size: 145%;
+  }
+  .Plist{
+    border:none;
+  }
+  .container2{
+    width: 75%;
+    height: 60%;
+  }
+  .pic{
+    width: 45%;
+    margin-left: 0%;
+  }
+  .inp {
+    margin-top: 44%;
+    margin-left: -46%;
+    font-size: 120%;
+    width: 60%;
+  }
+  
+  .inp2 {
+    margin-top: 60%;
+    margin-left: -46%;
+    width: 60%;
+    height: 15%;
+    font-size:110%;
+    border: 1px solid black;
+  }
+  .save_btn {
+    font-size: 120%;
+    margin-top: 89%;
+    padding: 10px 1px;
+    width: 40%;
+    margin-left: -36%;
+    background-color: rgba(247,247,247,1);
+  }
+  #favourite{
+    margin-top: 25%;
+    margin-left: 4%;
+    font-size: 130%;
+  }
+  .sidenav{
+    z-index: 5;
+    width: 30%;
+    display: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .unshow{
+    display:none;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  .show{
+    display:block;
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  #navbar-favlist-header {
+    color: #cf97ca;
+    text-align: left;
+    font-size: 134%;
+    margin-top: 0%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #navbar-favlist {
+    text-align: left;
+    font-size: 110%;
+    margin-top: 5%;
+    margin-left: 9%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

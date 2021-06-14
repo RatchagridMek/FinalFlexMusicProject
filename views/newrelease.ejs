@@ -1,0 +1,24 @@
+<%- include('partials/HeadNav.ejs',{playlist:playlist})%>
+<link rel="stylesheet" type="text/css" href="/listall.css">
+<script src="/listall.js" defer></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <div class="container">
+        <div class="Rec"><%= header %></div>
+        <div class="Rec-set">
+          <% song.forEach(function(newrel){ %>
+            <div class="song-cover" onclick="location.href='/song?id=<%= newrel.id %>'">
+            <img class="playlist-pic" src="<%= newrel.Picture %>"><br><br>
+            <div class="cover-inside">
+              <a class="cover-header"><strong><%= newrel.name %></strong></a>
+              <a class="cover-desc"><%= newrel.artist %></a>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+          <div id="recent"></div>
+    </div>
+
+<%- include('partials/footer.ejs')%>

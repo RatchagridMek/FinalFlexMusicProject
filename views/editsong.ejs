@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/editsong.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/editsong.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+<head>
+    <header id="head"> 
+        <a class="logo" id="logo">FLEX</a>
+        <a style="margin-right: -5%;">
+            <a id="lock" class="fa fa-home" href="/main" style="text-decoration: none; font-size: 250%; margin-left: 80%; color:white;"></a>
+        <a id="signout" href="/logout" class="fa fa-sign-out" style="text-decoration: none; font-size: 250%; margin-left: 3%; color:white;"></a>
+        <a><img id="mode" onclick="switchmode()" class="mode_pic" src="https://sv1.picz.in.th/images/2021/04/16/AZxQYu.png"></a> 
+        </a>
+    </header>
+</head>
+<div class="sidenav" id="sidenav">
+    <div>
+        <br>
+        <a id="songM" style="background-color: black;"  href="/songM"><span class="fa fa-music" style="margin-right: 3%;"></span style="background: black;">   Song management
+        </a><br><br>
+        <a id="userM" href="/userM"><span class="fa fa-user" style="margin-right: 3%;"></span>   User management</a>
+        <br><br>
+        <a id="playlistM" href="/convert"><span class="fa fa-youtube" style="margin-right: 3%; "></span>   Youtube Converter</a>
+    </div>
+  </div>
+<body>
+        <div id="cover" class="container">
+            <a  href="/songM" class="fa fa-close" style="text-decoration: none; font-size: 300%; margin-top: 2%; margin-bottom: 5%; color:red; margin-left: 90%;"></a>
+        <div class="header_add">
+            DATA  EDIT  SONG
+        </div>
+        <label for="choose" >
+            <img id="image" class="pic" src="<%= song.Picture %>">
+        </label>
+            <form action="/songM/edit/<%= song.id %>" method="POST" enctype="multipart/form-data">
+                <div style="margin-left: 1%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-user"></a>
+                    <a class="text">Name : </a>
+                    <input class="inp" name='sname' value="<%= song.name %>" type="text">
+                </div>
+                <div style="margin-left: -0.5%; margin-top: 2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-user"></a>
+                    <a class="text">Artist : </a>
+                    <input class="inp" value="<%= song.artist %>" name='sartist' type="text">
+                </div>
+                <div style="margin-left: 0.5%; margin-top: 2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-clock-o"></a>
+                    <a class="text">Release Date : </a>
+                    <input class="inp" value="<%= song.Release %>" name='srelease' type="text">
+                </div>
+                <div style="margin-left: -12%; margin-top: 2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-image"></a>
+                    <a class="text">Image : </a>
+                    <input type="text" name="Imageold" value="<%= song.Picture %>" style="display:none">
+                    <input id="choose" class="inp" onchange="previewFile('<%= song.Picture %>')" name='spic' type="file" accept="image/*">
+                </div>
+                <div style="margin-right: -65.7%; margin-top: -2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-file-audio-o"></a>
+                    <a class="text">Song Audio File : </a>
+                    <input type="text" name="Audioold" value="<%= song.Audio %>" style="display:none">
+                    <input class="inp" name='saudio' type="file" accept="audio/*">
+                </div>
+                <div style="margin-left: 0.5%; margin-top: 2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-clock-o"></a>
+                    <a class="text">Duration : </a>
+                    <input class="inp" value="<%= song.Duration %>" name='sduration' type="text">
+                </div>
+                <div style="margin-left: 0.3%; margin-top: 2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-tag"></a>
+                    <a class="text">Genre : </a>
+                    <select class="inp" name="sgen" required>
+                        <option value="Rock">Rock</option>
+                        <option value="Pop">Pop music</option>
+                        <option value="Jazz">Jazz</option>
+                        <option value="Classic">Classical</option>
+                        <option value="Anime">Anime</option>
+                        <option value="Orchestra">Orchestra</option>
+                        <option value="Country">Country</option>
+                        <option value="Arcade">Arcade Games</option>
+                        <option value="Dance">Dance Pop</option>
+                    </select>
+                </div>
+                <div id="caution">**หากท่านไม่ต้องการที่จะแก้ไขข้อมูลทั้งหมดกรุณาอย่าลบข้อมูลทิ้งให้ปล่อยค้างไว้**</div>
+                <br>
+                <button type="submit" class="sub-add-btn">Save & Changes</button>
+            </form>
+
+            
+        </div>
+</body>
+
+</html>

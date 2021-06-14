@@ -1,0 +1,77 @@
+<%- include('partials/HeadNav.ejs',{playlist:playlist})%>
+<link rel="stylesheet" type="text/css" href="/favourite.css">
+<script src="/favourite.js" defer></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <div class="container">
+        <div class="fav-header">
+            <img id="fav-image" src="https://sv1.picz.in.th/images/2021/04/27/A2MKha.png">
+            <a class="fav-topic-header">PLAYLIST</a>
+            <a class="fav-topic-middle">Liked Songs</a>
+            <a class="fav-topic-footer"><%= currentUser.name %></a>
+            <% if(currentUser.favourites.length === 0){ %>
+
+            <% } else{ %>
+                <a id="fav-play" onclick="playfromlist()" class="fa fa-play-circle-o"></a>
+            <% } %>
+        </div>
+        <div class="body">
+            <table class="table-fav">
+                <tr>
+                    <th style="width: 5%;">#</span></th>
+                    <th id="namesort">Name<span id="namesortpic" onclick="sortbyname()" class="fa fa-sort-up"></span></th>
+                    <th id="artistsort">Artist<span id="artistsortpic" onclick="sortbyartist()" class="fa fa-sort-up" ></span></th>
+                    <th style="width: 15%;">Duration</th>
+                    <th style="width: 10%;"></th>
+                </tr>
+                <% song.forEach(function(song,index){ %>
+                    <tr class="nosort">
+                    <td style="width: 5%;"><a class="fa fa-play" onclick="playfromclickin('<%= index %>')"></a></td>
+                    <td class="songnamelist" style="width: 30%; cursor: pointer;" onclick="location.href='/song?id=<%= song.songID %>'"><%= song.name %></td>
+                    <td style="width: 30%;"><%= song.artist %></td>
+                    <td style="width: 15%;"><%= song.duration %></td>
+                    <td style="text-align: center; font-size: 170%; width: 17%; "><a style="outline: none; text-decoration: none; color:#ffffff;" href="/favourite/remove/<%= song.id %>" title="remove song" class="fa fa-heart"></a></td>
+                    </tr>
+                <% }) %>
+                <% namesort.forEach(function(song,index){ %>
+                    <tr class="namesort">
+                        <td style="width: 5%;"><a class="fa fa-play"></a></td>
+                        <td style="width: 30%; cursor: pointer;" onclick="location.href='/song?id=<%= song.songID %>'"><%= song.name %></td>
+                        <td style="width: 30%;"><%= song.artist %></td>
+                        <td style="width: 15%;"><%= song.duration %></td>
+                        <td style="text-align: center; font-size: 170%; width: 17%; "><a style="outline: none; text-decoration: none; color:#ffffff;" href="/favourite/remove/<%= song.id %>" class="fa fa-heart"></a></td>
+                    </tr>
+                <% }) %>
+                <% artistsort.forEach(function(song,index){ %>
+                    <tr class="artistsort">
+                        <td style="width: 5%;"><a class="fa fa-play"></a></td>
+                        <td style="width: 30%; cursor: pointer;" onclick="location.href='/song?id=<%= song.songID %>'"><%= song.name %></td>
+                        <td style="width: 30%;"><%= song.artist %></td>
+                        <td style="width: 15%;"><%= song.duration %></td>
+                        <td style="text-align: center; font-size: 170%; width: 17%; "><a style="outline: none; text-decoration: none; color:#ffffff;" href="/favourite/remove/<%= song.id %>" class="fa fa-heart"></a></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+        <div id="footing" class="foot"></div>
+    </div>
+    <audio style="display:none;" id="player" controls preload="metadata">
+        <source type="audio/mpeg">
+        Your browser doesn't support the element
+    </audio>
+    <div id="song-container">
+        <img src="https://sv1.picz.in.th/images/2021/04/27/A2MKha.png" id="song-player">
+        <a id="player-cover" onclick="play()" class="fa fa-play" title="click to play"></a>
+        <a id="back5" onclick="back5()" class="fa fa-angle-double-left" title="go back 5 second"></a>
+        <a id="loop-cover" onclick="reruntrue()" class="fa fa-refresh" title="loop song"></a>
+        <a id="audio-name"></a>
+        <a id="next5" onclick="next5()" class="fa fa-angle-double-right" title="next 5 second"></a>
+        <a id="time-cover">00:00</a>
+        <input type="range" id="slider" value="0" min="0" onclick="seek()">
+        <a id="duration-cover"></a>
+        <div id="volume-cover-outside">
+          <a id="volume-cover" onclick="checkmute()" class="fa fa-volume-down"></a><input type="range" id="volumn-control" min="0" max="100" value="10" step="1">
+        </div>
+      </div>
+<%- include('partials/footer.ejs') %>

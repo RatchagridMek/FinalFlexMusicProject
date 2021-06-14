@@ -1,0 +1,149 @@
+<%- include('partials/HeadNav.ejs',{playlist:playlist})%>
+<link rel="stylesheet" type="text/css" href="/main.css">
+<script src="/main.js" defer></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+      <div class="container">
+      <form action="/search" method="POST">
+          <input class="search" id="searchinp" name="search" type="input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Song / Artist'" placeholder="Search Song / Artist"><br>
+          <button id="search-btn" type="submit" style="display: none;"></button>
+      </form>
+        <div class="Rec">New Release</div>
+        <div class="Rec-set">
+          <% newrelease.forEach(function(newrel){ %>
+            <div class="song-cover" onclick="location.href='/song?id=<%= newrel.id %>'">
+            <img class="playlist-pic" src="<%= newrel.Picture %>"><br><br>
+            <div class="cover-inside">
+              <a class="cover-header"><strong><%= newrel.name %></strong></a>
+              <a class="cover-desc"><%= newrel.artist %></a>
+            </div>
+          </div>
+          <% }) %>
+          <div class="song-cover" onclick="location.href='/newrelease'">
+            <a id="next1" class="fa fa-arrow-circle-o-right nextall"></a>
+          </div>
+          <div class="song-cover1"></div>
+          </div>
+          <div class="Rec">Top Song</div>
+          <div class="Rec-set">
+            <% song.forEach(function(song){%>
+              <div class="song-cover" onclick="location.href='/song?id=<%= song.id %>'">
+              <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+              <div class="cover-inside">
+                  <a class="cover-header"><strong><%= song.name %></strong></a>
+                  <a class="cover-desc"><%= song.artist %></a>
+                  <a class="cover-viewer">จำนวนคนฟัง : <%= song.viewer %> คน</a>
+              </div>
+            </div>
+            <% }) %>
+            <div class="song-cover" onclick="location.href='/topsong'">
+              <a id="next1" class="fa fa-arrow-circle-o-right nextall"></a>
+            </div>
+            <div class="song-cover1"></div>
+            </div>
+          <div class="Rec">More by Arcade Music</div>
+          <div style="width: 100%; height: 15px; display:none;"></div>
+          <div class="Rec-set">
+            <% arcade.forEach(function(song){ %>
+              <div class="song-cover" onclick="location.href='/song?id=<%= song.id %>'">
+                <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                <div class="cover-inside">
+                    <a class="cover-header"><strong><%= song.name %></strong></a>
+                    <a class="cover-desc"><%= song.artist %></a>
+                </div>
+              </div>
+            <% }) %>
+            <div class="song-cover" onclick="location.href='/arcademusic'">
+              <a id="next1" class="fa fa-arrow-circle-o-right nextall"></a>
+            </div>
+              <div class="song-cover1"></div>
+            </div>
+            <div class="Rec">More by Num kala</div>
+            <div style="width: 100%; height: 15px; display:none;"></div>
+            <div class="Rec-set">
+              <% numkala.forEach(function(song){ %>
+                <div class="song-cover" onclick="location.href='/song?id=<%= song.id %>'">
+                  <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                  <div class="cover-inside">
+                      <a class="cover-header"><strong><%= song.name %></strong></a>
+                      <a class="cover-desc"><%= song.artist %></a>
+                  </div>
+                </div>
+              <% }) %>
+              <div class="song-cover" onclick="location.href='/numkala'">
+                <a id="next1" class="fa fa-arrow-circle-o-right nextall"></a>
+              </div>
+                <div class="song-cover1"></div>
+              </div>
+              <div class="Rec">More of Pop Music</div>
+            <div style="width: 100%; height: 15px; display:none;"></div>
+            <div class="Rec-set">
+              <% pop.forEach(function(song){ %>
+                <div class="song-cover" onclick="location.href='/song?id=<%= song.id %>'">
+                  <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                  <div class="cover-inside">
+                      <a class="cover-header"><strong><%= song.name %></strong></a>
+                      <a class="cover-desc"><%= song.artist %></a>
+                  </div>
+                </div>
+              <% }) %>
+              <div class="song-cover" onclick="location.href='/popmusic'">
+                <a id="next1" class="fa fa-arrow-circle-o-right nextall"></a>
+              </div>
+                <div class="song-cover1"></div>
+              </div>
+              <div class="Rec">For the rock fanclub</div>
+            <div style="width: 100%; height: 15px; display:none;"></div>
+            <div class="Rec-set">
+              <% rock.forEach(function(song){ %>
+                <div class="song-cover" onclick="location.href='/song?id=<%= song.id %>'">
+                  <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                  <div class="cover-inside">
+                      <a class="cover-header"><strong><%= song.name %></strong></a>
+                      <a class="cover-desc"><%= song.artist %></a>
+                  </div>
+                </div>
+              <% }) %>
+              <div class="song-cover" onclick="location.href='/rockmusic'">
+                <a id="next1" class="fa fa-arrow-circle-o-right nextall"></a>
+              </div>
+                <div class="song-cover1"></div>
+              </div>
+              <div class="Rec">More of acoustic song</div>
+            <div style="width: 100%; height: 15px; display:none;"></div>
+            <div class="Rec-set">
+              <% guitar.forEach(function(song){ %>
+                <div class="song-cover" onclick="location.href='/song?id=<%= song.id %>'">
+                  <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                  <div class="cover-inside">
+                      <a class="cover-header"><strong><%= song.name %></strong></a>
+                      <a class="cover-desc"><%= song.artist %></a>
+                  </div>
+                </div>
+              <% }) %>
+              <div class="song-cover" onclick="location.href='/acousticmusic'">
+                <a id="next1" class="fa fa-arrow-circle-o-right nextall"></a>
+              </div>
+                <div class="song-cover1"></div>
+              </div>
+              <div class="Rec">Random song for you</div>
+            <div style="width: 100%; height: 15px; display:none;"></div>
+            <div class="Rec-set">
+              <% random.forEach(function(song){ %>
+                <div class="song-cover" onclick="location.href='/song?id=<%= song._id %>'">
+                  <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                  <div class="cover-inside">
+                      <a class="cover-header"><strong><%= song.name %></strong></a>
+                      <a class="cover-desc"><%= song.artist %></a>
+                  </div>
+                </div>
+              <% }) %>
+                <div class="song-cover1"></div>
+              </div>
+            <div id="recent"></div>
+        </div>
+            
+        
+<%- include('partials/footer.ejs')%>

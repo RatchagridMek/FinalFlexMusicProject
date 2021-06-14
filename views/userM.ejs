@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/userM.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/userM.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link rel = "icon" href = "https://sv1.picz.in.th/images/2021/03/29/DXzUM8.png" type = "image/x-icon">
+<head>
+    <header id="head"> 
+        <a class="logo" id="logo">FLEX</a>
+        <a style="margin-right: -5%;">
+        <a id="lock" class="fa fa-home" href="/main" style="text-decoration: none; font-size: 250%; margin-left: 80%; color:white;"></a>
+        <a id="signout" href="/logout" class="fa fa-sign-out" style="text-decoration: none; font-size: 250%; margin-left: 3%; color:white;"></a>
+        <a><img id="mode" onclick="switchmode()" class="mode_pic" src="https://sv1.picz.in.th/images/2021/04/16/AZxQYu.png"></a> 
+        </a>
+    </header>
+</head>
+<% if(success && success.length > 0) { %>
+    <div id="success-bar"><span class="check fa fa-check"></span><%= success %></div>
+  <% } %>
+<div class="sidenav" id="sidenav">
+    <div>
+        <br>
+        <a id="songM"  href="/songM"><span class="fa fa-music" style="margin-right: 3%;"></span style="background: black;">   Song management
+        </a><br><br>
+        <a id="userM" style="background-color: black;" href="/userM"><span class="fa fa-user" style="margin-right: 3%;"></span>   User management</a>
+        <br><br>
+        <a id="playlistM" href="/convert"><span class="fa fa-youtube" style="margin-right: 3%; "></span>   Youtube Converter</a>
+    </div>
+  </div>
+<body>
+        <div id="cover" class="container">
+            <div class="control-header">
+                <form action="/userM/search" method="POST">
+                    <input id="myInput" autocomplete="off" name="search" class="search" placeholder="Search by Name" onfocus="placeholder = ' '" onblur="placeholder = 'Search by Name' ">
+                    <button id="sub-btn" type="submit">Search</button>
+                </form>
+            </div>
+            <form class="sortkung">
+                <select id="sort" class="select" name="sorting" onchange="startsort()">
+                    <option value="">Sort By :</option>
+                    <option value="name">Sort by Name</option>
+                    <option value="surname">Sort by Surname</option>
+                    <option value="email">Sort by Email</option>
+                    <option value="rank">Sort by Rank</option>
+                    <option value="default">Sort by default</option>
+                </select>
+            </form>
+            
+                <table id="detail">
+                    <tr>
+                      <th>User No.</th>
+                      <th>Name</th>
+                      <th>Surname</th>
+                      <th>Email</th>
+                      <th>Contact</th>
+                      <th>Rank</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                    <% user.forEach(function(user){ %>
+                    <tr class="sort-default">
+                        <td><%= user.id %></td>
+                        <td><%= user.name %></td>
+                        <td><%= user.surname %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.phone %></td>
+                        <td><%= user.rank %></td>
+                        <td><a class="fa fa-edit edit" href="/userM/edit/<%= user.id %>"></a></td>
+                        <td><a class="fa fa-remove remove" href="/userM/remove/<%= user.id %>" style="color:red"></a></td>
+                    </tr>
+                    <% }); %>
+                    <% name.forEach(function(user){ %>
+                        <tr class="sort-name">
+                            <td><%= user.id %></td>
+                            <td><%= user.name %></td>
+                            <td><%= user.surname %></td>
+                            <td><%= user.email %></td>
+                            <td><%= user.phone %></td>
+                            <td><%= user.rank %></td>
+                            <td><a class="fa fa-edit edit" href="/userM/edit/<%= user.id %>"></a></td>
+                            <td><a class="fa fa-remove remove" href="/userM/remove/<%= user.id %>" style="color:red"></a></td>
+                        </tr>
+                    <% }); %>
+                    <% surname.forEach(function(user){ %>
+                            <tr class="sort-surname">
+                                <td><%= user.id %></td>
+                                <td><%= user.name %></td>
+                                <td><%= user.surname %></td>
+                                <td><%= user.email %></td>
+                                <td><%= user.phone %></td>
+                                <td><%= user.rank %></td>
+                                <td><a class="fa fa-edit edit" href="/userM/edit/<%= user.id %>"></a></td>
+                                <td><a class="fa fa-remove remove" href="/userM/remove/<%= user.id %>" style="color:red"></a></td>
+                            </tr>
+                    <% }); %>
+                    <% email.forEach(function(user){ %>
+                                <tr class="sort-email">
+                                    <td><%= user.id %></td>
+                                    <td><%= user.name %></td>
+                                    <td><%= user.surname %></td>
+                                    <td><%= user.email %></td>
+                                    <td><%= user.phone %></td>
+                                    <td><%= user.rank %></td>
+                                    <td><a class="fa fa-edit edit" href="/userM/edit/<%= user.id %>"></a></td>
+                                    <td><a class="fa fa-remove remove" href="/userM/remove/<%= user.id %>" style="color:red"></a></td>
+                                </tr>
+                    <% }); %>
+                    <% rank.forEach(function(user){ %>
+                                    <tr class="sort-rank">
+                                        <td><%= user.id %></td>
+                                        <td><%= user.name %></td>
+                                        <td><%= user.surname %></td>
+                                        <td><%= user.email %></td>
+                                        <td><%= user.phone %></td>
+                                        <td><%= user.rank %></td>
+                                        <td><a class="fa fa-edit edit" href="/userM/edit/<%= user.id %>"></a></td>
+                                        <td><a class="fa fa-remove remove" href="/userM/remove/<%= user.id %>" style="color:red"></a></td>
+                                    </tr>
+                    <% }); %>
+                  </table>
+            
+            
+            <div style="margin-top: 2%;"></div>
+            
+        </div>
+</body>
+
+</html>

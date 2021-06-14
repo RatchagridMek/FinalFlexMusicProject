@@ -1,0 +1,60 @@
+<%- include('partials/premiumhead.ejs') %>
+<link rel="stylesheet" type="text/css" href="/confirmpayment.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <div class="container">
+        <div class="payment-wrapper">
+            <div class="show-product">
+                <br>
+                <a class="product-name"><b>FLEX Premium <%= type.toUpperCase() %> PACK</b></a><br>
+                <a class="product-price"><b><%= price %>$ / <%= month %> month</b></a>
+            </div><br>
+            <div class="payment-header">
+                Payment details
+            </div>
+            <div class="show-payment">
+                <br>
+                <form action="/premiumactive?date=<%= month %>" method="POST">
+                    <a id="cardheader"><b>CARD NUMBER</b></a><br><br>
+                    <input type="tel" id="cardinput" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus /><span id="creditpic" class="fa fa-credit-card"></span><br><br><br><br>
+                    <a id="card-exp-header"><b>EXPIRATION DATE</b><a id="card-cv-code"><b>CV CODE</b></a><br><br>
+                    <input type="tel" id="card-exp" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp"required />
+                    <input type="tel" id="card-cv" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
+                    <br><br><br>
+                    <a id="coupon"><b>COUPON CODE</b></a><br><br>
+                    <input type="text" id="couponcode" name="coupon" placeholder="Coupon Code" /><span id="couponpic" class="fa fa-codepen"></span><br><br><br>
+                    <button id="submitbtn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-container">
+        <div class="mb-payment-wrapper">
+            <div class="mb-show-product">
+                <br>
+                <a class="mb-product-name"><b>FLEX Premium <%= type.toUpperCase() %> PACK</b></a><br>
+                <a class="mb-product-price"><b><%= price %>$ / <%= month %> month</b></a>
+            </div><br>
+            <div class="mb-payment-header">
+                Payment details
+            </div>
+            <div class="mb-show-payment">
+                <br>
+                <form action="/premiumactive" method="POST">
+                    <a id="mb-cardheader"><b>CARD NUMBER</b></a><br>
+                    <input type="tel" id="mb-cardinput" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus /><span id="mb-creditpic" class="fa fa-credit-card"></span><br><br>
+                    <a id="mb-card-exp-header"><b>EXPIRATION DATE</b><a id="mb-card-cv-code"><b>CV CODE</b></a><br>
+                    <input type="tel" id="mb-card-exp" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp"required />
+                    <input type="tel" id="mb-card-cv" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
+                    <br><br>
+                    <a id="mb-coupon"><b>COUPON CODE</b></a><br>
+                    <input type="text" id="mb-couponcode" name="coupon" placeholder="Coupon Code" /><span id="mb-couponpic" class="fa fa-codepen"></span><br><br>
+                    <button id="mb-submitbtn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('partials/footer.ejs') %>

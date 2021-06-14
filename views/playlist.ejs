@@ -1,0 +1,109 @@
+<%- include('partials/HeadNav.ejs',{playlist:playlist})%>
+  <link rel="stylesheet" type="text/css" href="/playlist.css">
+  <script src="/playlist.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="container">
+        
+        <div>
+          <img class="playlistPIC" src="<%= playlist2.Picture %>">
+            <a class="PLtitle">playlist</a>
+            <a class="PLname"> <strong><%= playlist2.name %></strong></a>
+            <a class="PLdis"><%= playlist2.description %></a>
+            <% if(playlist2.songlist.length === 0){ %>
+
+            <% } else{ %>
+              <a id="fav-play" class="fa fa-play-circle-o" onclick="playfromlist('<%= playlist2.id %>')"></a>
+            <% } %>
+            <a id="bar-play" class="fa fa-ellipsis-h" onclick="custommenu()"></a>
+            <a id="custom-bar2">
+              <div class="inside-bar" onclick="openedit()">Edit</div>
+              <div class="inside-bar" onclick="removeplaylist('<%= playlist2.id %>')">Delete</div>
+            </a>
+        </div>
+        <table class="table-fav">
+          <tr>
+              <th style="width: 5%;">#</span></th>
+              <th id="namesort">Name<span id="namesortpic" onclick="sortbyname()" class="fa fa-sort-up"></span></th>
+              <th id="artistsort">Artist<span id="artistsortpic" onclick="sortbyartist()" class="fa fa-sort-up"></span></th>
+              <th style="width: 15%;">Duration</th>
+              <th style="width: 10%;"></th>
+          </tr>
+          <% playlist2.songlist.forEach(function(song,index){ %>
+              <tr class="nosort">
+                <td style="width: 5%;"><a class="fa fa-play" onclick="playfromclickin('<%= playlist2.id %>','<%= index %>')"></a></td>
+                <td class="songnamelist" style="width: 30%; cursor: pointer;" onclick="location.href='/song?id=<%= song.id %>'"><%= song.name %></td>
+                <td style="width: 30%;"><%= song.artist %></td>
+                <td style="width: 15%;"><%= song.Duration %></td>
+                <td style="text-align: center; font-size: 170%; width: 10%; "><a style="outline: none; text-decoration: none; color:#ffffff;" href="/playlist/removesong/<%= song.id %>/<%= playlist2.id %>" title="remove song" class="fa fa-heart"></a></td>
+              </tr>
+          <% }) %>
+          <% namesort.songlist.forEach(function(song,index){ %>
+            <tr class="namesort">
+              <td style="width: 5%;"><a class="fa fa-play" onclick="playfromclickin('<%= playlist2.id %>','<%= index %>')"></td>
+              <td style="width: 30%; cursor: pointer;" onclick="location.href='/song?id=<%= song.id %>'"><%= song.name %></td>
+              <td style="width: 30%;"><%= song.artist %></td>
+              <td style="width: 15%;"><%= song.Duration %></td>
+              <td style="text-align: center; font-size: 170%; width: 10%; "><a style="outline: none; text-decoration: none; color:#ffffff;" href="/playlist/removesong/<%= song.id %>/<%= playlist2.id %>" title="remove song" class="fa fa-heart"></a></td>
+            </tr>
+        <% }) %>
+        <% artistsort.songlist.forEach(function(song,index){ %>
+          <tr class="artistsort">
+            <td style="width: 5%;"><a class="fa fa-play" onclick="playfromclickin('<%= playlist2.id %>','<%= index %>')"></td>
+            <td style="width: 30%; cursor: pointer;" onclick="location.href='/song?id=<%= song.id %>'"><%= song.name %></td>
+            <td style="width: 30%;"><%= song.artist %></td>
+            <td style="width: 15%;"><%= song.Duration %></td>
+            <td style="text-align: center; font-size: 170%; width: 10%; "><a style="outline: none; text-decoration: none; color:#ffffff;" href="/playlist/removesong/<%= song.id %>/<%= playlist2.id %>" title="remove song" class="fa fa-heart"></a></td>
+          </tr>
+      <% }) %>
+        </table>
+        <div id="recent"></div>
+      </div>
+
+      <audio style="display:none;" id="player" controls preload="metadata">
+        <source type="audio/mpeg">
+        Your browser doesn't support the element
+    </audio>
+    
+      <div id="song-container">
+        <img src="<%= playlist2.Picture %>" id="song-player">
+        <a id="player-cover" onclick="play()" class="fa fa-play" title="click to play"></a>
+        <a id="back5" onclick="back5()" class="fa fa-angle-double-left" title="go back 5 second"></a>
+        <a id="loop-cover" onclick="reruntrue()" class="fa fa-refresh" title="loop song"></a>
+        <a id="next5" onclick="next5()" class="fa fa-angle-double-right" title="next 5 second"></a>
+        <a id="time-cover">00:00</a>
+        <input type="range" id="slider" value="0" min="0" onclick="seek()">
+        <a id="duration-cover"></a>
+        <div id="volume-cover-outside">
+          <a id="volume-cover" onclick="checkmute()" class="fa fa-volume-down"></a><input type="range" id="volumn-control" min="0" max="100" value="10" step="1">
+        </div>
+      </div>
+
+      <div id="custom-bar">
+        <div class="inside-bar" onclick="openedit()">Edit</div>
+        <div class="inside-bar" onclick="removeplaylist('<%= playlist2.id %>')">Delete</div>
+      </div>
+
+      <div id="edit-wrapper">
+        <div id="edit-wrapper-inside">
+          <br>
+          <a id="tips">TIPS : ** You can change picture by click at the picture **</a>
+          <form id="editform" action="/playlist/edit/<%= playlist2.id %>" method="POST" enctype="multipart/form-data">
+          <label for="Peditimage" >
+            <img id="Pimage" src="<%= playlist2.Picture %>">
+          </label><br><br><br>
+        <input name="Pimage" id="Peditimage" type="file" onchange="previewFileforPlaylist('<%= playlist2.Picture %>')" style="display:none" accept="image/*">
+        <input type="text" name="oldPimage" style="display:none;" value="<%= playlist2.Picture %>">
+        <a id="inpname">
+          name
+          <input name="Pname" id="inpforname" type="text" value="<%= playlist2.name %>">
+        </a><br><br><br>
+        <a id="inpdesc">
+          Desc
+          <textarea name="Pdesc" id="inpfordesc" type="text" ><%= playlist2.description %></textarea>
+        </a>
+        <button type="submit" id="Pedit-btn">SUBMIT</button>
+      </form>
+        </div>
+      </div>
+      
+<%- include('partials/footer.ejs')%>

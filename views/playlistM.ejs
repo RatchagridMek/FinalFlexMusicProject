@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/playlistM.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/playlistM.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel = "icon" href = "https://sv1.picz.in.th/images/2021/03/29/DXzUM8.png" type = "image/x-icon">
+<head>
+    <header id="head"> 
+        <a class="logo" id="logo">FLEX</a>
+        <a style="margin-right: -5%;">
+            <a id="lock" class="fa fa-home" href="/main" style="text-decoration: none; font-size: 250%; margin-left: 80%; color:white;"></a>
+        <a id="signout" href="/logout" class="fa fa-sign-out" style="text-decoration: none; font-size: 250%; margin-left: 3%; color:white;"></a>
+        <a><img id="mode" onclick="switchmode()" class="mode_pic" src="https://sv1.picz.in.th/images/2021/04/16/AZxQYu.png"></a> 
+        </a>
+    </header>
+</head>
+<div class="sidenav" id="sidenav">
+    <div>
+        <br>
+        <a id="songM" href="/songM"><span class="fa fa-music" style="margin-right: 3%;"></span style="background: black;">   Song management</a><br><br>
+        <a id="userM" href="/userM"><span class="fa fa-user" style="margin-right: 3%; "></span>   User management</a><br><br>
+        <a id="playlistM" style="background-color: black;" href="/playlistM"><span class="fa fa-list" style="margin-right: 3%; "></span>   Playlist management</a>
+    </div>
+  </div>
+<body>
+        <div id="cover" class="container">
+            <div class="control-header">
+                <input class="search" placeholder="Search by Name" onfocus="placeholder = ' '" onblur="placeholder = 'Search by Name'">
+                <a id="add" onclick="add()" class="fa fa-plus-square"></a>
+            </div>
+            <table id="detail">
+                <tr>
+                  <th>Playlist ID.</th>
+                  <th>Name</th>
+                  <th>Owner</th>
+                  <th>Song</th>
+                  <th>Release Date</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+                <% playlist.forEach(function(playlist){ %>
+                    <tr>
+                        <td><%= playlist.id %></td>
+                        <td><%= playlist.name %></td>
+                        <td><%= playlist.ownerID %></td>
+                        <td><%= playlist.songlist %></td>
+                        <td><%= playlist.Release %></td>
+                        <td><a class="fa fa-edit edit" href="/playlistM/edit/<%= playlist.id %>"></a></td>
+                        <td><a class="fa fa-remove remove" href="/playlistM/remove/<%= playlist.id %>"></a></td>
+                    </tr>
+                    <% }); %>
+              </table>
+            <div style="margin-top: 2%;"></div>
+            
+        </div>
+        <div id="addnew" class="container2">
+            <a onclick="unadd()" class="fa fa-close" style="font-size: 300%; margin-top: 2%; margin-bottom: 5%; color:red; margin-left: 90%;"></a>
+        <div class="header_add">
+            DATA  INSERT  PLAYLIST
+        </div><br><br>
+        <form action="/addplaylist" method="POST">
+            <div style="margin-left: 1%;">
+                <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-list"></a>
+                <a class="text">Playlist name : </a>
+                <input class="inp" name='Pname' type="text">
+            </div>
+            <div style="margin-left: -1.5%; margin-top: 2%;">
+                <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-align-left"></a>
+                <a class="text">Playlist description : </a>
+                <input class="inp2" name='Pdesc' type="text">
+            </div>
+            <br><br>
+            <button type="submit" class="sub-add-btn">Save & Changes</button>
+            
+        </form>
+        </div>
+</body>
+
+</html>

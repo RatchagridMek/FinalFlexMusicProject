@@ -1,0 +1,469 @@
+.container{
+    margin : 2% auto auto 15%;
+    width: 90%;
+    height: 900px;
+    position: relative;
+    overflow-y:scroll;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .Rec-set{
+    margin-top: -3%;
+    margin-bottom: 2%;
+  }
+  
+  .Rec{
+    font-size: 300%;
+    color: #FF86DB;
+    margin-top: 0%;
+    margin-left: 0%;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  
+  .song-cover{
+    width: 250px;
+    height: 320px;
+    background-color: rgba(61, 60, 60, 0.4);
+    margin: 5% auto auto 0.75%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .cover-inside{
+    text-align: left;
+    margin-left: 15%;
+    font-family: 'Mukta', sans-serif;
+  }
+  
+  .cover-header{
+    font-size: 120%;
+      color: #ffffff;
+      text-overflow: ellipsis;
+      width: 90%;
+      white-space: nowrap;
+      display: block;
+  }
+  
+  
+  .cover-desc{
+    font-size: 120%;
+    color:#ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+    width: 90%;
+  }
+  
+  .playlist-pic{
+    margin-top: 5%;
+    width: 70%;
+    height: 60%;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  }
+
+  #recent{
+    margin-top: 5%;
+  }
+
+  @media screen and (max-width: 1024px){
+    .container {
+      margin: 2% auto auto 14%;
+      width: 90%;
+      height: 1255px;
+      position: relative;
+      overflow-y: scroll;
+    }
+    .Rec {
+      white-space: nowrap;
+      font-size: 500%;
+      margin-top: 7%;
+      margin-left: 4%;
+    }
+    .Rec-set{
+      margin-top: -7%;
+    }
+    .song-cover {
+      width: 280px;
+      height: 359px;
+      margin: 12.5% auto auto 0%;
+      background-color: rgba(61, 60, 60, 0);
+      display: inline-block;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+    }
+    .cover-header {
+      font-size: 180%;
+      color: #FFFFFF;
+      text-overflow: ellipsis;
+      width: 90%;
+      white-space: nowrap;
+      display: block;
+      margin-top: -1%;
+    }
+    .cover-desc {
+      font-size: 170%;
+      color: #FFFFFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 90%;
+      margin-top: 3%;
+    }
+    .playlist-pic {
+      margin-top: 5%;
+      width: 80%;
+      height: 60%;
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    }
+    #recent{
+      margin-top: 85%;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .container {
+      margin: 2% auto auto 14%;
+      width: 90%;
+      height: 938px;
+      position: relative;
+      overflow-y: scroll;
+    }
+    .Rec {
+      white-space: nowrap;
+      font-size: 440%;
+      margin-top: 7%;
+      margin-left: 4%;
+    }
+    .Rec-set{
+      margin-top: -7%;
+    }
+    .song-cover {
+      width: 220px;
+      height: 270px;
+      margin: 12.5% auto auto 0%;
+      background-color: rgba(61, 60, 60, 0);
+      display: inline-block;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+    }
+    .cover-header {
+      font-size: 160%;
+      color: #FFFFFF;
+      text-overflow: ellipsis;
+      width: 90%;
+      white-space: nowrap;
+      display: block;
+      margin-top: -1%;
+    }
+    .cover-desc {
+      font-size: 146%;
+      color: #FFFFFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 90%;
+      margin-top: 3%;
+    }
+    .playlist-pic {
+      margin-top: 5%;
+      width: 80%;
+      height: 60%;
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    }
+    #recent{
+      margin-top: 85%;
+    }
+  }
+  
+  @media screen and (max-width: 540px){
+    .container {
+      margin: 2% auto auto 9%;
+      width: 90%;
+      height: 900px;
+      position: relative;
+      overflow-y: scroll;
+    }
+    .Rec {
+      white-space: nowrap;
+      font-size: 300%;
+      margin-top: 7%;
+    }
+    .Rec-set{
+      margin-top: -7%;
+    }
+    .song-cover {
+      width: 220px;
+      height: 270px;
+      margin: 12.5% auto auto 0%;
+      background-color: rgba(61, 60, 60, 0);
+      display: inline-block;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+    }
+    .cover-header {
+      font-size: 147%;
+      color: #FFFFFF;
+      text-overflow: ellipsis;
+      width: 90%;
+      white-space: nowrap;
+      display: block;
+      margin-top: -1%;
+    }
+    .cover-desc {
+      font-size: 155%;
+      color: #FFFFFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 90%;
+      margin-top: 3%;
+    }
+    .playlist-pic {
+      margin-top: 5%;
+      width: 80%;
+      height: 60%;
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    }
+    #recent{
+      margin-top: 85%;
+    }
+  }
+
+  @media screen and (max-width: 420px){
+    .container {
+      margin: 2% auto auto 5%;
+      width: 90%;
+      height: 900px;
+      position: relative;
+      overflow-y: scroll;
+    }
+    .Rec {
+      white-space: nowrap;
+      font-size: 300%;
+      margin-top: 7%;
+    }
+    .Rec-set{
+      margin-top: -7%;
+    }
+    .song-cover {
+      width: 184px;
+      height: 235px;
+      margin: 12.5% auto auto 0%;
+      background-color: rgba(61, 60, 60, 0);
+      display: inline-block;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+    }
+    .cover-header {
+      font-size: 130%;
+      color: #FFFFFF;
+      text-overflow: ellipsis;
+      width: 90%;
+      white-space: nowrap;
+      display: block;
+      margin-top: -1%;
+    }
+    .cover-desc {
+      font-size: 130%;
+      color: #FFFFFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 90%;
+      margin-top: 3%;
+    }
+    .playlist-pic {
+      margin-top: 5%;
+      width: 80%;
+      height: 60%;
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    }
+    #recent{
+      margin-top: 85%;
+    }
+  }
+
+  @media screen and (max-width: 375px) and (height: 812px){
+    .container {
+      margin: 2% auto auto 5%;
+      width: 90%;
+      height: 900px;
+      position: relative;
+      overflow-y: scroll;
+    }
+    .Rec {
+      white-space: nowrap;
+      font-size: 275%;
+      margin-top: 7%;
+    }
+    .Rec-set{
+      margin-top: -7%;
+    }
+    .song-cover {
+      width: 166px;
+      height: 222px;
+      margin: 12.5% auto auto 0%;
+      background-color: rgba(61, 60, 60, 0);
+      display: inline-block;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+    }
+    .cover-header {
+      font-size: 120%;
+      color: #FFFFFF;
+      text-overflow: ellipsis;
+      width: 90%;
+      white-space: nowrap;
+      display: block;
+      margin-top: -1%;
+    }
+    .cover-desc {
+      font-size: 120%;
+      color: #FFFFFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 90%;
+      margin-top: 3%;
+    }
+    .playlist-pic {
+      margin-top: 5%;
+      width: 80%;
+      height: 60%;
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    }
+    #recent{
+      margin-top: 70%;
+    }
+  }
+
+  @media screen and (max-width: 375px) and (height: 667px){
+    .container {
+      margin: 2% auto auto 5%;
+      width: 90%;
+      height: 900px;
+      position: relative;
+      overflow-y: scroll;
+    }
+    .Rec {
+      white-space: nowrap;
+      font-size: 235%;
+      margin-top: 7%;
+    }
+    .Rec-set{
+      margin-top: -7%;
+    }
+    .song-cover {
+      width: 166px;
+      height: 222px;
+      margin: 12.5% auto auto 0%;
+      background-color: rgba(61, 60, 60, 0);
+      display: inline-block;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+    }
+    .cover-header {
+      font-size: 120%;
+      color: #FFFFFF;
+      text-overflow: ellipsis;
+      width: 90%;
+      white-space: nowrap;
+      display: block;
+      margin-top: -1%;
+    }
+    .cover-desc {
+      font-size: 120%;
+      color: #FFFFFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 90%;
+      margin-top: 3%;
+    }
+    .playlist-pic {
+      margin-top: 5%;
+      width: 80%;
+      height: 60%;
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    }
+    #recent{
+      margin-top: 148%;
+    }
+  }
+
+@media screen and (max-width: 320px){
+  .container {
+    margin: 2% auto auto 5%;
+    width: 90%;
+    height: 900px;
+    position: relative;
+    overflow-y: scroll;
+  }
+  .Rec {
+    white-space: nowrap;
+    font-size: 235%;
+    margin-top: 7%;
+  }
+  .Rec-set{
+    margin-top: -7%;
+  }
+  .song-cover {
+    width: 142px;
+    height: 218px;
+    margin: 12.5% auto auto 0%;
+    background-color: rgba(61, 60, 60, 0);
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+  .cover-header {
+    font-size: 100%;
+    color: #FFFFFF;
+    text-overflow: ellipsis;
+    width: 90%;
+    white-space: nowrap;
+    display: block;
+    margin-top: -1%;
+  }
+  .cover-desc {
+    font-size: 100%;
+    color: #FFFFFF;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+    margin-top: 3%;
+  }
+  .playlist-pic {
+    margin-top: 5%;
+    width: 80%;
+    height: 60%;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  }
+  #recent{
+    margin-top: 148%;
+  }
+}

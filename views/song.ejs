@@ -1,0 +1,284 @@
+<%- include('partials/HeadNav.ejs',{playlist:playlist}) %>
+<link rel="stylesheet" type="text/css" href="/song.css">
+<script src="/song.js" defer></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <div class="container">
+        <div>
+            <img class="playlist-pic" src="<%= song[0].Picture %>">
+            <a class="top-header">SINGLE</a>
+            <% song.forEach(function(song){ %> 
+            <a class="middle-header"><%= song.name %></a>
+            <a class="footer-header">By <%= song.artist %></a>
+            <% if(favlist.includes(favcheck.id)){ %>
+                <a class="cover-down-fav">
+                    <form action="/favourite/remove/<%= favcheck.id %>/<%= song.id %>" method="GET">
+                        <button id="delfav" title="remove song from favourite" type="submit" class="fa fa-heart"></button>
+                    </form>
+                </a>
+            <% } else{ %>
+                    <a class="cover-down-fav">
+                                    <form action="/favourite/add/<%= song.id %>" method="POST">
+                                        <input type="text" style="display: none;" name="uid" value="<%= currentUser._id %>">
+                                        <input type="text" style="display: none;" name="uname" value="<%= currentUser.name %>">
+                                        <button id="favbtn" title="add song to favourite" onclick="favfunction()" class="fa fa-heart-o"></button>
+                                        <button id="addfav" style="display:none;" type="submit"></button>
+                                    </form>
+                                </a>
+            <% } %>
+            <% if(currentUser.rank === "Member"){ %>
+                
+            <% } else if(currentUser.rank === "Premium"){ %>
+               <a class="cover-down-download">
+                <button type="submit" id="download" title="download song" onclick="document.getElementById('download02').click()" class="fa fa-download" ></button>
+                <a id="download02" style="display:none;" href="<%= song.Audio %>" download='<%= song.name %>'></a>
+            </a> 
+            <% } else if(currentUser.rank === "Admin"){ %>
+                <a class="cover-down-download">
+                     <button type="submit" id="download" title="download song" onclick="document.getElementById('download02').click()"" class="fa fa-download" ></button>
+                     <a id="download02" style="display:none;" href="<%= song.Audio %>" download='<%= song.name %>'></a>
+                </a>
+            <% } %>
+
+            <% if(currentUser.playlist.length === 0){ %>
+                <% if(currentUser.rank === "Member"){ %>
+                    <a class="cover-down-playlist">
+                        <button id="member-listbtn1" class="playlist-member" onclick="addlist()">Create playlist</button>
+                    </a> 
+                <% } else { %>
+                    <a class="cover-down-playlist">
+                        <button id="premium-listbtn1" class="playlist-premium" onclick="addlist()">Create playlist</button>
+                    </a>
+                <% } %>
+            <% } else if(currentUser.playlist.length !== 0){ %>
+                <% if(currentUser.rank === "Member"){ %>
+                    <a class="cover-down-playlist">
+                            <button id="member-listbtn2" type="submut" class="playlist-member" onclick="addsong('<%= song.id %>')">Add to playlist</button>
+                    </a> 
+                <% } else { %>
+                    <a class="cover-down-playlist">
+                            <button id="member-listbtn2" type="submut" class="playlist-premium" onclick="addsong('<%= song.id %>')">Add to playlist</button>
+                    </a>
+                <% } %>
+            <% } %>
+            <br>
+            <a id="fav-play" onclick="playfromclick()" class="fa fa-play-circle-o">PLAY</a>
+            <a>
+                    <table class="table-fav">
+                <tr>
+                    <th style="width: 5%;">#</span></th>
+                    <th id="namesort">Name</th>
+                    <th id="artistsort">Artist</th>
+                    <th style="width: 15%;">Duration</th>
+                </tr>
+                    <tr class="nosort">
+                    <td id="linktoplay" style="width: 5%;">
+                        <span id="hov" onclick="playfromclick()" class="fa fa-play-circle-o"></span>
+                    </td>
+                    <td style="width: 30%;"><%= song.name %></td>
+                    <td style="width: 30%;"><%= song.artist %></td>
+                    <td style="width: 15%;"><%= song.Duration %></td>
+                    </tr>
+                </a>
+            </table>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <a class="rec-zone">More by <%= song.artist %></a>
+        <% }) %>
+        <div class="rec-footer">
+            <% rec.forEach(function(rec){ %> 
+            <div class="rec-cover" onclick="location.href='/song?id=<%= rec.id %>'">
+                <img class="rec-pic" src="<%= rec.Picture %>"><br><br>
+                <div class="cover-inside">
+                    <a class="cover-header"><strong><%= rec.name %></strong></a>
+                    <a class="cover-desc"><%= rec.artist %></a>
+                </div>
+              </div>
+              <% }) %>
+              <div class="rec-coverlast"></div>
+        </div>
+        <audio style="display:none;" id="player" controls preload="metadata">
+            <source src="<%= song[0].Audio %>" type="audio/mpeg">
+            Your browser doesn't support the element
+          </audio>
+        <div id="footing" class="foot"></div>
+    </div>
+    <div id="song-container">
+        <img src="<%= song[0].Picture %>" id="song-player">
+        <a id="player-cover" onclick="play()" class="fa fa-play" title="click to play"></a>
+        <a id="back5" onclick="back5()" class="fa fa-angle-double-left" title="go back 5 second"></a>
+        <a id="loop-cover" onclick="reruntrue()" class="fa fa-refresh" title="loop song"></a>
+        <a id="audio-name"><%= song[0].name %></a>
+        <a id="next5" onclick="next5()" class="fa fa-angle-double-right" title="next 5 second"></a>
+        <a id="time-cover">00:00</a>
+        <input type="range" id="slider" value="0" min="0" onclick="seek()">
+        <a id="duration-cover"></a>
+        <div id="volume-cover-outside">
+          <a id="volume-cover" onclick="checkmute()" class="fa fa-volume-down"></a><input type="range" id="volumn-control" min="0" max="100" value="10" step="1">
+        </div>
+      </div> 
+    <form style="display:none;" action="/playlist/addsong" method="POST">
+        <input id="songinp" name="sid" value="">
+        <input id="playlistinp" name="pid" value="">
+        <button id="submitbtn" type="submit"></button>
+    </form>
+    <div id="playlist-container-wrapper">
+        <div id="playlist-container">
+            <% playlist.forEach(function(playlist,index){ %>
+                <a class="playlist-per-item fa fa-dot-circle-o" onclick="addthistoplaylist('<%= song[0].id %>','<%= playlist.id %>')">  <%= playlist.name %></a>
+            <% }) %>
+        </div>
+    </div>
+    
+
+    
+<style>
+    .playlist-per-item{
+        width: 100%;
+        height: 10%;
+        background-color: rgb(87, 82, 82);
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        border: 2px solid black;
+        display: block;
+        color: white;
+        font-size: 180%;
+        cursor: pointer;
+        padding: 27px 0px 0px 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        float: left;
+        overflow-x: hidden;
+    }
+    @media screen and (max-width: 1024px){
+    .playlist-per-item {
+    width: 100%;
+    height: 11%;
+    background-color: rgb(87, 82, 82);
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    border: 2px solid black;
+    display: block;
+    color: white;
+    font-size: 270%;
+    cursor: pointer;
+    padding: 27px 0px 0px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    overflow-x: hidden;
+    }
+    }
+    @media screen and (max-width: 768px){
+    .playlist-per-item {
+    width: 100%;
+    height: 12%;
+    background-color: rgb(87, 82, 82);
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    border: 2px solid black;
+    display: block;
+    color: white;
+    font-size: 175%;
+    cursor: pointer;
+    padding: 27px 0px 0px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    overflow-x: hidden;
+        }
+    }
+    @media screen and (max-width: 540px){
+    .playlist-per-item {
+    width: 100%;
+    height: 13%;
+    background-color: rgb(87, 82, 82);
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    border: 2px solid black;
+    display: block;
+    color: white;
+    font-size: 155%;
+    cursor: pointer;
+    padding: 27px 0px 0px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    overflow-x: hidden;
+        }
+    }
+    @media screen and (max-width: 375px) and (height: 667px){
+    .playlist-per-item {
+    width: 100%;
+    height: 13%;
+    background-color: rgb(87, 82, 82);
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    border: 2px solid black;
+    display: block;
+    color: white;
+    font-size: 148%;
+    cursor: pointer;
+    padding: 27px 0px 0px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    overflow-x: hidden;
+        }
+    }
+    @media screen and (max-width: 375px) and (height: 812px){
+    .playlist-per-item {
+    width: 100%;
+    height: 13%;
+    background-color: rgb(87, 82, 82);
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    border: 2px solid black;
+    display: block;
+    color: white;
+    font-size: 148%;
+    cursor: pointer;
+    padding: 27px 0px 0px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    overflow-x: hidden;
+        }
+    }
+    @media screen and (max-width: 320px){
+    .playlist-per-item {
+    width: 100%;
+    height: 18%;
+    background-color: rgb(87, 82, 82);
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    border: 2px solid black;
+    display: block;
+    color: white;
+    font-size: 148%;
+    cursor: pointer;
+    padding: 27px 0px 0px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    overflow-x: hidden;
+        }
+    }
+    
+    
+    
+    
+    
+</style>
+
+<%- include('partials/footer.ejs')%>

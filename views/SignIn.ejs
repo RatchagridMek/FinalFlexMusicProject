@@ -1,0 +1,119 @@
+<%- include('partials/Signin_header.ejs')%>
+<body id="body">
+  <div id="container">
+    <div id="pageWrap" class="page_wrapper">
+    </div>
+    <div id="cover">
+        <!-- Sign Up Section -->
+        <h1 id="01" class="sign-up-header">FLEX</h1>
+        <h2 id="02" class="sign-up-bottom">Sign in now and enjoy your music <br> experience!!</h2>
+      
+        <!-- Sign In Section -->
+        <h1 id="03" class="sign-in-header display_none">FLEX</h1>
+        <h2 id="04" class="sign-in-bottom display_none">Best Quality Easy to used and free</h2>
+        <br><br>
+        <br>
+        <h3 id="05" class="sign-in-bottom display_none">Already have an Account ?</h3>
+        <br>
+        <a id="goback" class="button sub sign-in" onclick="myfunction2()" href="#" >Sign In Now!!!</a>
+   
+    </div>
+    <!-- Login Box -->
+    <div id="login">
+        <a><img class="logo" src="/photo/logoGern.png"></a>
+      <h1 class="header_signin">Sign In to your account</h1>
+      <form action="/Signin" method="POST">
+        <input type="text" name='email' pattern="[A-Za-z0-9!#$%^&*()_+-=]+@+[a-zA-Z]+.+[a-z]" placeholder="Email" autocomplete="on" required ><br>
+        <input type="password" name='password' placeholder="Password" autocomplete="off" required><br>
+        <% if(error && error.length > 0) { %>
+          <div style="color:red; font-size: 100%; margin-left: -10%"><%= error %></div><br>
+        <% } %>
+        <a id="forgot-pass"><input name="remember" type="checkbox"></input>  Remember</a>
+        <a id="reset-pass" href="/forgetpassword">Forgot Password?</a><br>
+        <input onclick="pathset()" class="submit-btn" type="button" value="Sign In">
+        <button id="submita" type="submit" style="display: none;"></button>
+        <% if(success && success.length > 0) { %>
+          <div style="color: rgb(18 123 41); font-size: 130%; margin-top: 2%;" ><%= success %></div>
+        <% } %>
+        <p></p>
+      </form>
+        <a>Don't have an account ? </a>
+        <a onclick="myfunction1()">Create Now</a>
+    </div>
+    
+    <!-- Register Box -->
+    <div id="register">
+      <a><img class="logo_register" src="/photo/logoGern.png"></a>
+      <h1 class="header_signin">Create your account</h1>
+      <form action="/Signup" method="POST">
+        <a class="fa fa-user"></a>
+        <input type="text" name='name' placeholder="Name" autocomplete="on" required>
+        <input type="text" name='surname' placeholder="Surname" autocomplete="on" required>
+        <br>
+            <a class="fa fa-envelope"></a>
+            <input type="email" pattern="[A-Za-z0-9!#$%^&*()_+-=]+@+[a-zA-Z]+.+[a-z]" id="changename" name='email' style="width: 78%; margin-left: auto;" placeholder="Email" autocomplete="on" required><br>
+            <a class="fa fa-key"></a>
+            <input id="password1-pc" type="password" name='password' style="width: 78%; margin-left: auto;" placeholder="Password" autocomplete="off" required><br>
+            <a class="fa fa-key"></a>
+            <input id="password2-pc" type="password" oninput="validatePassword()" name="passwordcheck" style="width: 78%; margin-left: auto;" placeholder="Confirm password" autocomplete="off" required><br>
+            <a class="fa fa-phone"></a>
+            <input type="text" pattern="[0-9]{9,10}" name='phone' oninput="validatePassword()" style="width: 78%; margin-left: auto;" placeholder="Phone number" autocomplete="on" required><br>
+            <a class="display_none" style="margin-left: -4%; font-size: 120%;" id="term"><input type="checkbox" required></input>  I accept the Terms of Use & Privacy Policy</a><br>
+        <input class="submit-btn" type="submit" value="Sign Up">
+      </form>
+    </div>
+    <div class="loader-wrapper" id="loading">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    </div>
+    <div class="login-wrapper" id="login1">
+      <div class="mobile-login-container">
+        <div id="space-header">
+          <a><img class="logo" src="/photo/logoGern.png"></a>
+        <h1 class="header_signin">Sign In to your account</h1><br>
+        <form action="/Signin" method="POST">
+          <input type="email" pattern="[A-Za-z0-9!#$%^&*()_+-=]+@+[a-zA-Z]+.+[a-z]" name='email' placeholder="Email" autocomplete="off" required><br>
+          <input type="password" name='password' placeholder="Password" autocomplete="off" required><br>
+          <% if(error && error.length > 0) { %>
+            <div class="signinerr"><%= error %></div><br>
+          <% } %>
+          <a id="forgot-pass" href="/forgetpassword">Forgot Password?</a><br>
+          <input onclick="pathset()" class="submit-btn" type="submit" value="Sign In">
+          <p></p>
+          <div class="gosignup">
+            <a>Don't have an account ?<br></a>
+          <a id="gotosignup" onclick="myfunction3()">Create Now</a>
+          </div>
+        </form>
+        </div>
+      </div>
+  </div>
+  <div class="register-wrapper" id="register1">
+      <div class="mobile-regis-container">
+          <div>
+            <a><img class="logo_register" src="/photo/logoGern.png"></a>
+            <h1 class="header_signup">Create your account</h1>
+            <form action="/Signup" method="POST">
+              <a id="userpic" class="fa fa-user"></a>
+              <input id="name" name='name' type="text" placeholder="Name" autocomplete="off" required><br>
+              <a id="userpic" class="fa fa-user"></a>
+              <input id="name" name='surname' type="text" placeholder="Surname" autocomplete="off" required>
+              <br>
+                  <a id="userpic" class="fa fa-envelope"></a>
+                  <input id="name" name='email' pattern="[A-Za-z0-9!#$%^&*()_+-=]+@+[a-zA-Z]+.+[a-z]" type="email" placeholder="Email" autocomplete="off" required><br>
+                  <a id="userpic"class="fa fa-key"></a>
+                  <input id="password1-mobile" name='password' type="password" placeholder="Password" autocomplete="off" required><br>
+                  <a id="userpic" class="fa fa-key"></a>
+                  <input id="password2-mobile" type="password" name="passwordcheck" oninput="mobilevalidatePassword()" placeholder="Confirm password" autocomplete="off" required><br>
+                  <a id="userpic" class="fa fa-phone"></a>
+                  <input id="name" name='phone' pattern="[0-9]{9,10}" type="text" placeholder="Phone number" autocomplete="off" required><br>
+                  <br><div id="register-footer">
+                    <a>Already have an account ?<a id="gotosignin" onclick="myfunction4()"><br>Sign in now!</a></a>
+                  </div>
+              <input onclick="location.href = 'C:\\Users\\meak4\\Desktop\\KMUTT Y2\\T2\\WebPro\\Project\\Signin_Test.html';" class="submit-btn" type="submit" value="Sign Up">
+            </form>
+          </div>
+      </div>
+  </div>
+
+<%- include('partials/footer.ejs')%>

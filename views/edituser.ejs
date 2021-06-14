@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/edituser.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/edituser.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+<head>
+    <header id="head"> 
+        <a class="logo" id="logo">FLEX</a>
+        <a style="margin-right: -5%;">
+            <a id="lock" class="fa fa-home" href="/main" style="text-decoration: none; font-size: 250%; margin-left: 80%; color:white;"></a>
+        <a id="signout" href="/logout" class="fa fa-sign-out" style="text-decoration: none; font-size: 250%; margin-left: 3%; color:white;"></a>
+        <a><img id="mode" onclick="switchmode()" class="mode_pic" src="https://sv1.picz.in.th/images/2021/04/16/AZxQYu.png"></a> 
+        </a>
+    </header>
+</head>
+<div class="sidenav" id="sidenav">
+    <div>
+        <br>
+        <a id="songM"  href="/songM"><span class="fa fa-music" style="margin-right: 3%;"></span style="background: black;">   Song management
+        </a><br><br>
+        <a id="userM" style="background-color: black;" href="/userM"><span class="fa fa-user" style="margin-right: 3%;"></span>   User management</a>
+        <br><br>
+        <a id="playlistM" href="/convert"><span class="fa fa-youtube" style="margin-right: 3%; "></span>   Youtube Converter</a>
+    </div>
+  </div>
+<body>
+        <div id="cover" class="container">
+            <a  href="/userM" class="fa fa-close" style="text-decoration: none; font-size: 300%; margin-top: 2%; margin-bottom: 5%; color:red; margin-left: 90%;"></a>
+        <div class="header_add">
+            DATA  EDIT  USER
+        </div><br><br>
+            <form action="/userM/edit/<%= user.id %>" method="POST">
+                <div style="margin-left: 1%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-user"></a>
+                    <a class="text">Name : </a>
+                    <input class="inp" name='uname' value="<%= user.name %>" type="text">
+                </div>
+                <div style="margin-left: -0.5%; margin-top: 2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-user"></a>
+                    <a class="text">Surname : </a>
+                    <input class="inp" value="<%= user.surname %>" name='usurname' type="text">
+                </div>
+                <div style="margin-left: 0.5%; margin-top: 2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-envelope"></a>
+                    <a class="text">Email : </a>
+                    <input class="inp" value="<%= user.email %>" name='uemail' type="text">
+                </div>
+                <div style="margin-right: 0.3%; margin-top: 2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-phone"></a>
+                    <a class="text">Contact : </a>
+                    <input class="inp" value="<%= user.phone %>" name='uphone' type="text">
+                </div>
+                <div style="margin-left: 0.7%; margin-top: 2%;">
+                    <a style="margin-right: 0.5%; font-size: 150%;" class="fa fa-star-o"></a>
+                    <a class="text">Rank : </a>
+                    <input class="inp" value="<%= user.rank %>" name='urank' type="text">
+                </div>
+                <div id="caution">**หากท่านไม่ต้องการที่จะแก้ไขข้อมูลทั้งหมดกรุณาอย่าลบข้อมูลทิ้งให้ปล่อยค้างไว้**</div>
+                <br><br>
+                <button type="submit" class="sub-add-btn">Save & Changes</button>
+            </form>
+
+            
+        </div>
+</body>
+
+</html>

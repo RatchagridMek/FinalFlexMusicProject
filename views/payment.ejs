@@ -1,0 +1,169 @@
+<%- include('partials/premiumhead.ejs')%>
+<link rel="stylesheet" type="text/css" href="/payment.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+<script src="/payment.js" defer></script>
+<body>
+    <div class="container"> 
+        <div>
+            <a class="container-inside1">
+                <a class="header-plan">STARTER PACK
+                    <br>
+                    <a class="middle-plan">3$ / Month
+                        <br>
+                        <a class="capacity-plan">1 account 
+                            <br><br><hr style="width: 552px; margin-left: 38%;">
+                            <br>
+                            <a class="detail-starter">
+                                <span class="fa fa-check">  Unlimited song play without Ads</span><br><br>
+                                <span class="fa fa-check" style="margin-right: 4%;">  Play everywhere and everytime</span><br><br>
+                                <span class="fa fa-check" style="margin-right: 13%;">  Special price for next month</span>
+                                <br>
+                                <form action="/payment/starter" target="_blank" method="GET">
+                                    <button type="submit" class="starter-confirmbtn">START PLAN</button>
+                                </form>
+                            </a>
+                        </a>
+                    </a>
+                </a>
+            </a>
+            <a class="container-inside2">
+                <a class="header-plan2">MUSICIAN PACK
+                    <br>
+                    <a class="middle-plan2">10$ / 4 Months [ SAVE 2$ ]
+                        <br>
+                        <a class="capacity-plan2">1 account 
+                            <br><br><hr style="width: 552px; margin-left: 38%;">
+                            <br>
+                            <a class="detail-starter2">
+                                <span class="fa fa-check" style="margin-right: 18%; width: 350px;">  Unlimited song play without Ads</span><br><br>
+                                <span class="fa fa-check" style="margin-right: 22%; width: 334px;">  Play everywhere and everytime</span><br><br>
+                                <span class="fa fa-check" style="margin-right: 29%; width: 304px;">  Special price for next month</span>
+                                <br><br>
+                                <span class="fa fa-check" style="margin-right: 28%; width: 308px;">  Special Group chat to shared</span><br><span style="margin-right: 47%;">quality song</span>
+                                <form action="/payment/musician" method="GET" target="_blank">
+                                      <button type="submit" class="starter-confirmbtn2">START PLAN</button>
+                                </form>
+                            </a>
+                        </a>
+                    </a>
+                </a>
+            </a>
+            <a class="container-inside3">
+                <a class="header-plan3">PRO PACK
+                    <br>
+                    <a class="middle-plan3">30$ / 12 Months [ SAVE 6$ ]
+                        <br>
+                        <a class="capacity-plan3">1 account 
+                            <br><br><hr style="width: 552px; margin-left: 38%;">
+                            <br>
+                            <a class="detail-starter3">
+                                <span class="fa fa-check" style="margin-right: 26%; width: 350px;">  Unlimited song play without Ads</span><br><br>
+                                <span class="fa fa-check" style="margin-right: 29%; width: 334px;">  Play everywhere and everytime</span><br><br>
+                                <span class="fa fa-check" style="margin-right: 34%; width: 304px;">  Special price for next month</span>
+                                <br><br>
+                                <span class="fa fa-check" style="margin-right: 34%; width: 308px;">  Special Group chat to shared</span><br><span style="margin-right: 48%;">quality song</span><br><br>
+                                <span class="fa fa-check" style="margin-right: 40%; width: 274px;">  Special gift for every one</span><br><span style="margin-right: 55%;">year user</span>
+                                <form action="/payment/pro" method="GET" target="_blank"> 
+                                    <button type="submit" class="starter-confirmbtn3">START PLAN</button>
+                                </form>
+                            </a>
+                        </a>
+                    </a>
+                </a>
+            </a>
+            <img style=" -webkit-filter: grayscale(100%); filter: grayscale(100%);" src="https://i.pinimg.com/originals/ba/d9/fd/bad9fd378d090074f3f29b126535b925.jpg">
+        </div>
+    </div>
+    <div id="mobile-container">
+        <div id="mb-starter-container">
+            <br>
+            <a id="mb-starter-header">
+                <strong>STARTER'S PACK</strong>
+            </a><br>
+            <a id="mb-starter-price">
+                3$ / Month
+            </a><br><br>
+            <a class="mb-starter-benefit">
+                <span class="fa fa-check">  Unlimited song play without Ads</span>
+            </a><br><br>
+            <a class="mb-starter-benefit">
+                <span class="fa fa-check">  Play music everywhere and <br>everytime</span>
+            </a><br><br>
+            <a class="mb-starter-benefit">
+                <span class="fa fa-check">  Special price for next month</span>
+            </a><br><br>
+            <form action="/payment/starter" target="_blank" method="GET">
+                <button id="mb-starter-button">
+                    START PLAN
+                </button>
+            </form>
+            
+        </div>
+        <div id="mb-musician-container">
+            <br>
+            <a id="mb-musician-header">
+                <strong>MUSICIAN'S PACK</strong>
+            </a><br>
+            <a id="mb-musician-price">
+                10$ / 4Month
+            </a><br><br>
+            <a class="mb-musician-benefit">
+                <span class="fa fa-check">  SAVE 2$</span>
+            </a><br><br>
+            <a class="mb-musician-benefit">
+                <span class="fa fa-check">  Unlimited song play without Ads</span>
+            </a><br><br>
+            <a class="mb-musician-benefit">
+                <span class="fa fa-check">  Play music everywhere and <br>everytime</span>
+            </a><br><br>
+            <a class="mb-musician-benefit">
+                <span class="fa fa-check">  Special price for next month</span>
+            </a><br><br>
+            <a class="mb-musician-benefit">
+                <span class="fa fa-check">  Special Group chat to shared<br>quality song</span>
+            </a><br><br>
+            <form action="/payment/musician" target="_blank" method="GET">
+                <button id="mb-musician-button">
+                    START PLAN
+                </button>
+            </form>  
+        </div>
+        <div id="mb-pro-container">
+            <br>
+            <a id="mb-pro-header">
+                <strong>PRO'S PACK</strong>
+            </a><br>
+            <a id="mb-pro-price">
+                30$ / 12Month
+            </a><br><br>
+            <a class="mb-pro-benefit">
+                <span class="fa fa-check">  SAVE 6$</span>
+            </a><br><br>
+            <a class="mb-pro-benefit">
+                <span class="fa fa-check">  Unlimited song play without Ads</span>
+            </a><br><br>
+            <a class="mb-pro-benefit">
+                <span class="fa fa-check">  Play music everywhere and <br>everytime</span>
+            </a><br><br>
+            <a class="mb-pro-benefit">
+                <span class="fa fa-check">  Special price for next month</span>
+            </a><br><br>
+            <a class="mb-pro-benefit">
+                <span class="fa fa-check">  Special Group chat to shared<br>quality song</span>
+            </a><br><br>
+            <a class="mb-pro-benefit">
+                <span class="fa fa-check">  Special gift for every one<br>year user</span>
+            </a><br><br>
+            <form action="/payment/pro" target="_blank" method="GET">
+                <button id="mb-pro-button">
+                    START PLAN
+                </button>
+            </form>  
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+<%- include('./partials/footer.ejs') %>

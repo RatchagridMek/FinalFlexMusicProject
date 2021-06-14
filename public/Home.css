@@ -1,0 +1,630 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #0f1011;
+  }
+  
+  .logo {
+    margin-right: 45%;
+  }
+   
+  .cta_signin {
+    margin-right: 1%;
+    padding: 0.5% 1%;
+    border: 2px solid #932aa8;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-size: 175%;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+  }
+  
+  .cta_signin:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  .cta_signup:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .song-cover{
+    width: 250px;
+    height: 320px;
+    background-color: rgba(61, 60, 60, 0.4);
+    margin: 5% auto auto 3%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .cover-inside{
+    text-align: left;
+    margin-left: 15%;
+    font-family: 'Mukta', sans-serif;
+  }
+  
+  .cover-header{
+    font-size: 130%;
+    color:#ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+    width: 90%;
+  }
+  
+  
+  .cover-desc{
+    font-size: 100%;
+    color:#ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+    width: 90%;
+  }
+  
+  .playlist-pic{
+    margin-top: 5%;
+    width: 70%;
+    height: 60%;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  }
+  
+  
+  
+.logo_size{
+    width: 35%;
+    height: 35%;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 13%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 0; /* Stay on top */
+    bottom: 1; /* Stay at the top */
+    left: 0;
+    background-color: #262323; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #cf97cc;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.home_text{
+    font-size: medium;
+    color:white;
+}
+
+.dropdown-list a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display: block;}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display:none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.loader {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 0;            /******** <- Remove this line *********/
+  border: 4px solid rgb(241, 81, 207);
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display:inline;
+  width: 100%;
+  background-color: rgb(241, 81, 207);
+  animation: loader-inner 2s infinite ease-in;
+}
+
+#footer{
+  margin-top: 2%;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+
+}
+
+@media screen and (max-width:1024px){
+  #footer{
+    margin-top: 10%;
+  }
+  header{
+    height:80px;
+  }
+  .logo_size {
+    width: 65%;
+  }
+  .logo {
+    margin-right: 25%;
+  }
+  .cta_signin {
+    margin-right: 1%;
+    padding: 1% 5%;
+    border: 2px solid #932aa8;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 175%;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+  }
+  .song-cover {
+    width: 307px;
+    height: 347px;
+    background-color: rgba(61, 60, 60, 0);
+    margin: 5% auto auto 3%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+  .cover-desc {
+    font-size: 170%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+  .cover-header {
+    font-size: 185%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+  .logo_size {
+    width: 55%;
+    margin-left: 2%;
+  }
+}
+
+@media screen and (max-width:768px){
+  #footer{
+    margin-top: 10%;
+  }
+  header{
+    height:80px;
+  }
+  .logo_size {
+    width: 65%;
+  }
+  .logo{
+    margin-right: 9%;
+  }
+  .cta_signin {
+    margin-right: 1%;
+    padding: 1% 5%;
+    border: 2px solid #932aa8;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 140%;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+  }
+  .song-cover {
+    width: 230px;
+    height: 285px;
+    background-color: rgba(61, 60, 60, 0);
+    margin: 5% auto auto 3%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+  .cover-desc {
+    font-size: 135%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+  .cover-header {
+    font-size: 150%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+  .logo_size {
+    width: 55%;
+    margin-left: 2%;
+  }
+}
+
+
+@media screen and (max-width:540px){
+  #footer{
+    margin-top: 10%;
+  }
+  header{
+    height:80px;
+  }
+  .logo_size {
+    width: 65%;
+  }
+  .logo{
+    margin-right: -15%;
+  }
+  .cta_signin {
+    margin-right: 1%;
+    padding: 1% 5%;
+    border: 2px solid #932aa8;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 140%;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+  }
+  .song-cover {
+    width: 251px;
+    height: 290px;
+    background-color: rgba(61, 60, 60, 0);
+    margin: 5% auto auto 3%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+  .cover-desc {
+    font-size: 135%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+  .cover-header {
+    font-size: 150%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+  .logo_size {
+    width: 55%;
+    margin-left: 2%;
+  }
+}
+
+@media screen and (max-width:420px){
+  #footer{
+    margin-top: 10%;
+  }
+  header{
+    height:60px;
+  }
+  .logo_size {
+    width: 65%;
+  }
+  .logo{
+    margin-right: -15%;
+  }
+  .cta_signin {
+    margin-right: 1%;
+    padding: 1% 5%;
+    border: 2px solid #932aa8;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 135%;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+  }
+  .song-cover {
+    width: 192px;
+    height: 245px;
+    background-color: rgba(61, 60, 60, 0);
+    margin: 5% auto auto 3%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+  .cover-desc {
+    font-size: 120%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+  .cover-header {
+    font-size: 140%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width:375px) and (height: 812px){
+  #footer{
+    margin-top: 10%;
+  }
+  header{
+    height:60px;
+  }
+  .logo_size {
+    width: 65%;
+  }
+  .logo{
+    margin-right: -12%;
+  }
+  .cta_signin {
+    margin-right: 1%;
+    padding: 1% 5%;
+    border: 2px solid #932aa8;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 120%;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+  }
+  .song-cover {
+    width: 174px;
+    height: 223px;
+    background-color: rgba(61, 60, 60, 0);
+    margin: 5% auto auto 3%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+  .cover-desc {
+    font-size: 120%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+  .cover-header {
+    font-size: 140%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width:375px) and (height: 667px){
+  #footer{
+    margin-top: 10%;
+  }
+  header{
+    height:60px;
+  }
+  .logo_size {
+    width: 65%;
+  }
+  .logo{
+    margin-right: -12%;
+  }
+  .cta_signin {
+    margin-right: 1%;
+    padding: 1% 5%;
+    border: 2px solid #932aa8;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 120%;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+  }
+  .song-cover {
+    width: 174px;
+    height: 223px;
+    background-color: rgba(61, 60, 60, 0);
+    margin: 5% auto auto 3%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+  .cover-desc {
+    font-size: 120%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+  .cover-header {
+    font-size: 140%;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width:320px){
+  #footer{
+    margin-top: 10%;
+  }
+  header{
+    height:60px;
+  }
+  .logo_size {
+    width: 65%;
+  }
+  .logo{
+    margin-right: -10%;
+  }
+  .cta_signin {
+    margin-right: 1%;
+    padding: 1% 5%;
+    border: 2px solid #932aa8;
+    border-radius: 50px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+  }
+  .song-cover {
+    width: 148px;
+    height: 195px;
+    background-color: rgba(61, 60, 60, 0);
+    margin: 5% auto auto 3%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+
+}

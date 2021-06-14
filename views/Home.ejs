@@ -1,0 +1,17 @@
+<%- include('partials/Home_header.ejs')%>
+<body style="background-color: #262323;">
+      <div class="loader-wrapper" id="loading">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+      <% song.forEach(function(song){ %>
+        <div class="song-cover" onclick="letsignin()">
+                <img class="playlist-pic" src="<%= song.Picture %>"><br><br>
+                <div class="cover-inside">
+                    <a class="cover-header"><strong><%= song.name %></strong></a><br>
+                    <a class="cover-desc"><%= song.artist %></a>
+                </div>
+        </div>
+      <% }); %>
+      <div id="footer"></div>
+</body>
+<%- include('partials/footer.ejs')%>
