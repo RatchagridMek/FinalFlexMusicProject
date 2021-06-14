@@ -179,6 +179,9 @@ async function playfromclickin(pid,index){
     var data = await GetQueue(pid);
     document.getElementById('song-container').style.opacity = "0.9";
     audio.src = data[index].Audio;
+    for(let j=0;j< tablename.length;j++){
+        tablename[j].style.color = "#FFFFFF";
+    }
     tablename[index].style.color = "#FF86DB";
     audio.load();
     audio.play();
