@@ -231,8 +231,8 @@ function isLoggedOut(req, res, next){
 }
 
 function sendEmail(email,uniqueString){
-    var user = "flexmusicmek@gmail.com";
-    var password = "flexmek0849261272";
+    var user = "";
+    var password = "";
     var Transport = nodemailer.createTransport({
         service:"Gmail",
         auth:{
