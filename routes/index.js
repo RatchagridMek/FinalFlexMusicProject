@@ -691,8 +691,8 @@ router.get('/userverify/:token', middleware.isLoggedOut, function(req,res){
 
 
 function sendEmail(email,uniqueString){
-    var user = "flexmusicmek@gmail.com";
-    var password = "flexmek0849261272";
+    var user = "";
+    var password = "";
     var Transport = nodemailer.createTransport({
         service:"Gmail",
         auth:{
@@ -724,8 +724,8 @@ function sendEmail(email,uniqueString){
 }
 
 function verifyEmail(email,uniqueString){
-    var user = "flexmusicmek@gmail.com";
-    var password = "flexmek0849261272";
+    var user = "";
+    var password = "";
     var Transport = nodemailer.createTransport({
         service:"Gmail",
         auth:{
@@ -757,8 +757,8 @@ function verifyEmail(email,uniqueString){
 }
 
 function removeVerify(email,uniqueString){
-    var user = "flexmusicmek@gmail.com";
-    var password = "flexmek0849261272";
+    var user = "";
+    var password = "";
     var Transport = nodemailer.createTransport({
         service:"Gmail",
         auth:{
