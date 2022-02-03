@@ -82,8 +82,8 @@ var express = require('express'),
 
 
     function sendEmail(email,uniqueString){
-        var user = "flexmusicmek@gmail.com";
-        var password = "flexmek0849261272";
+        var user = "";
+        var password = "";
         var Transport = nodemailer.createTransport({
             service:"Gmail",
             auth:{
@@ -115,8 +115,8 @@ var express = require('express'),
     }
     
     function verifyEmail(email,uniqueString){
-        var user = "flexmusicmek@gmail.com";
-        var password = "flexmek0849261272";
+        var user = "";
+        var password = "";
         var Transport = nodemailer.createTransport({
             service:"Gmail",
             auth:{
@@ -148,8 +148,8 @@ var express = require('express'),
     }
     
     function removeVerify(email,uniqueString){
-        var user = "flexmusicmek@gmail.com";
-        var password = "flexmek0849261272";
+        var user = "";
+        var password = "";
         var Transport = nodemailer.createTransport({
             service:"Gmail",
             auth:{
