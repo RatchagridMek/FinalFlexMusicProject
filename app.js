@@ -264,8 +264,8 @@ function sendEmail(email,uniqueString){
 }
 
 function verifyEmail(email,uniqueString){
-    var user = "flexmusicmek@gmail.com";
-    var password = "flexmek0849261272";
+    var user = "";
+    var password = "";
     var Transport = nodemailer.createTransport({
         service:"Gmail",
         auth:{
